@@ -1,6 +1,6 @@
-import { vectorIndex } from "@/lib/vector";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
+import { vectorIndex } from "@/lib/vector";
 
 async function main() {
 	const products = JSON.parse(
