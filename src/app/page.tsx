@@ -121,8 +121,8 @@ export default function ChatPage() {
 		a: (props: any) => {
 			console.log(props);
 			// Check if this is a "View Product" link
-			const isViewProductLink = props.href.startsWith(
-				"https://compy.pe/galeria/producto/",
+			const isViewProductLink = props.href.includes(
+				"compy.pe/galeria/producto",
 			);
 
 			if (isViewProductLink) {

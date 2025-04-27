@@ -6,6 +6,20 @@ import { z } from "zod";
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
 
+// Define interfaces for the metadata types
+interface PriceHistory {
+	current: number;
+	previous: number;
+	minimum: number;
+	percent_save?: number;
+}
+
+interface StoreInfo {
+	store: string;
+	price: number;
+	url: string;
+}
+
 export async function POST(req: Request) {
 	const { messages } = await req.json();
 
@@ -13,6 +27,8 @@ export async function POST(req: Request) {
 		model: openai("gpt-4o"),
 		messages,
 		system: `You are a helpful product recommendation assistant for Compy.
+    Your main purpose is to provide information in the clearest way possible to help users make informed purchasing decisions.
+    The core focus of Compy is to inform users about historical price changes, helping them understand if current prices represent good value.
     Use the searchProducts tool to find relevant products based on the user's query.
     If no relevant products are found, suggest searching with different terms.
     
@@ -31,8 +47,47 @@ export async function POST(req: Request) {
     - Be concise but highlight key features, price, and specifications
     - Always include the product price in your response
     - Format prices as "S/ XXX.XX"
+    - Emphasize price savings when available - show both current price and previous price
+    - If a product has price history data, mention the lowest historical price and percentage savings
     - For multiple products, present a numbered list with brief descriptions
-    - Include a comparison table if showing multiple similar products`,
+    - Include a comparison table if showing multiple similar products
+    
+    PRICE INFORMATION:
+    - ALWAYS prioritize sharing historical price data - this is Compy's most valuable service to users
+    - Always highlight price advantages using this format: "Current price: S/ XXX.XX (Previous: S/ YYY.YY, Save: Z%)"
+    - If lowest historical price is available, include it as: "Lowest recorded price: S/ XXX.XX"
+    - When showing price changes, indicate if the current price is a good deal based on historical data
+    - Include a price history summary for each product (e.g., "Price has dropped 15% since last month")
+    - Always note if current price is at or near historical minimum
+    - If a product frequently goes on sale, mention this to the user
+    - Calculate and show the price difference between current and historical minimum as a percentage
+    
+    BUYING RECOMMENDATIONS:
+    - Compare current prices to historical minimums and explicitly advise the user
+    - If current price is more than 30% higher than historical minimum, advise the user they might want to wait
+    - For example, if minimum was S/ 899 and current is S/ 2179, clearly state this is not a good time to buy
+    - Label each product with a buying recommendation status: "Good time to buy", "Consider waiting", or "Wait for better offer"
+    - When multiple products are available, prioritize recommending those closer to their historical minimum prices
+    - Explain the price difference with specific numbers (e.g., "Current price is 142% higher than historical minimum")
+    
+    PRODUCT LINKS:
+    - ONLY provide links to Compy's platform, NEVER to other retailers
+    - Always include a "View on Compy" link at the end of each product description
+    - Use the product_url from metadata for the Compy link
+    - Format links as: [View on Compy](https://www.compy.pe/...)
+    
+    ADDITIONAL INFORMATION:
+    - If store availability data exists, mention how many retailers carry the product
+    - Include resolution information for screens and displays when available
+    - If product description exists, use it to enhance your response
+    - Mention key technical specifications from the metadata like memory, capacity, power, etc.
+    
+    COMPARISON SUMMARIES:
+    - When presenting multiple products, finish with a summary comparison table
+    - Include key differentiating features, specifications, and prices in the comparison table
+    - Highlight the best value options based on price-to-performance ratio
+    - Always include historical price trends in comparison tables when available
+    - Add a "Price Recommendation" column showing buy/wait recommendation based on historical data`,
 		tools: {
 			searchProducts: tool({
 				description: "Search for products in the Compy catalog",
@@ -132,11 +187,27 @@ export async function POST(req: Request) {
 								screen_size: match.metadata?.screen_size,
 								weight: match.metadata?.weight,
 								power: match.metadata?.power,
+								resolution: match.metadata?.resolution,
+								// Price history information
+								price_history: match.metadata?.price_history,
+								previous_price: match.metadata?.price_history
+									? (match.metadata?.price_history as PriceHistory).previous
+									: undefined,
+								lowest_price: match.metadata?.price_history
+									? (match.metadata?.price_history as PriceHistory).minimum
+									: undefined,
+
+								// Store information and description
+								description: match.metadata?.description,
+								store_count: match.metadata?.stores
+									? (match.metadata?.stores as StoreInfo[]).length
+									: 0,
+								stores: match.metadata?.stores,
 								// Add markdown formatted content
 								features_markdown: features.join("\n\n"),
 								specifications_markdown: specs.join("\n\n"),
 								// Explicitly add a View Product link for markdown rendering
-								view_product_link: `[View Product](${match.metadata?.product_url})`,
+								view_product_link: `[View on Compy](https://www.compy.pe/galeria/producto/${match.id})`,
 							};
 						}),
 						query,
