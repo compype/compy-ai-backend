@@ -135,6 +135,8 @@ export async function POST(req: Request) {
 								// Add markdown formatted content
 								features_markdown: features.join("\n\n"),
 								specifications_markdown: specs.join("\n\n"),
+								// Explicitly add a View Product link for markdown rendering
+								view_product_link: `[View Product](${match.metadata?.product_url})`,
 							};
 						}),
 						query,

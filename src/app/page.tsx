@@ -1,9 +1,10 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { useChat } from "@ai-sdk/react";
 import type { Message as UIMessage } from "@ai-sdk/react";
-import { useState } from "react";
-import type { ReactNode } from "react";
+import { ChevronRight, ExternalLink, Sparkles } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import type { Components } from "react-markdown";
 import rehypeRaw from "rehype-raw";
@@ -28,6 +29,7 @@ interface Product {
 	power?: string;
 	features_markdown?: string;
 	specifications_markdown?: string;
+	view_product_link?: string;
 }
 
 interface ChatMessage extends UIMessage {
@@ -38,27 +40,35 @@ interface ChatMessage extends UIMessage {
 	}>;
 }
 
+// Add a new Suggestion component before the main ChatPage component
+interface SuggestionProps {
+	text: string;
+	onClick: (text: string) => void;
+}
+
+function Suggestion({ text, onClick }: SuggestionProps) {
+	return (
+		<button
+			type="button"
+			onClick={() => onClick(text)}
+			className="flex w-full items-center rounded-lg border bg-background p-3 text-left text-sm shadow-sm transition-colors hover:bg-muted/50"
+		>
+			<span className="flex-1">{text}</span>
+			<ChevronRight className="h-4 w-4 text-muted-foreground" />
+		</button>
+	);
+}
+
 export default function ChatPage() {
 	const { messages, input, handleInputChange, handleSubmit, status } = useChat({
 		maxSteps: 3, // Allow multi-step tool calls
 	});
 
-	// Track expanded product details
-	const [expandedProducts, setExpandedProducts] = useState<Set<string>>(
-		new Set(),
-	);
-
-	// Toggle product details
-	const toggleProductDetails = (productId: string) => {
-		setExpandedProducts((prev) => {
-			const newSet = new Set(prev);
-			if (newSet.has(productId)) {
-				newSet.delete(productId);
-			} else {
-				newSet.add(productId);
-			}
-			return newSet;
-		});
+	// Function to handle suggestion clicks
+	const handleSuggestionClick = (text: string) => {
+		handleInputChange({
+			target: { value: text },
+		} as React.ChangeEvent<HTMLInputElement>);
 	};
 
 	// Custom renderers for markdown components
@@ -100,167 +110,52 @@ export default function ChatPage() {
 		),
 		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		tr: (props: any) => <tr className="even:bg-gray-50" {...props} />,
+		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+		a: (props: any) => {
+			console.log(props);
+			// Check if this is a "View Product" link
+			const isViewProductLink = props.href.startsWith(
+				"https://compy.pe/galeria/producto/",
+			);
+
+			if (isViewProductLink) {
+				return (
+					<Button variant="outline" size="sm" asChild className="mt-3 w-full">
+						<a
+							{...props}
+							className="flex items-center justify-center gap-2"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							{props.children}
+							<ExternalLink size={14} />
+						</a>
+					</Button>
+				);
+			}
+
+			// Default styling for other links
+			return (
+				<a
+					{...props}
+					className="text-blue-600 hover:underline focus:outline-none"
+				/>
+			);
+		},
 	};
 	/* eslint-enable @typescript-eslint/no-explicit-any */
 
-	// Render product cards from tools results
-	const renderProductCards = (message: ChatMessage): ReactNode | null => {
-		if (
-			message.toolResults &&
-			message.toolResults[0]?.result?.products?.length > 0
-		) {
-			const products = message.toolResults[0].result.products;
-
-			return (
-				<div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
-					{products.map((product: Product) => (
-						<div
-							key={product.id}
-							className="overflow-hidden rounded-lg border bg-white shadow transition-shadow hover:shadow-md"
-						>
-							{/* Product image */}
-							{product.image_url && (
-								<div className="relative flex h-40 justify-center bg-white p-2">
-									<img
-										src={product.image_url}
-										alt={product.title}
-										className="max-h-full object-contain"
-									/>
-								</div>
-							)}
-
-							{/* Product info */}
-							<div className="border-t p-3">
-								<h3 className="truncate font-medium text-gray-900">
-									{product.title}
-								</h3>
-								<p className="mt-1 font-bold text-blue-600 text-sm">
-									S/{" "}
-									{typeof product.price === "number"
-										? product.price.toFixed(2)
-										: product.price}
-								</p>
-								<p className="text-gray-500 text-xs">
-									{product.brand} | {product.model}
-								</p>
-
-								{/* Toggle details button */}
-								<button
-									type="button"
-									onClick={() => toggleProductDetails(product.id)}
-									className="mt-2 text-blue-500 text-xs hover:underline"
-								>
-									{expandedProducts.has(product.id)
-										? "Hide details"
-										: "Show details"}
-								</button>
-
-								{/* Expanded details */}
-								{expandedProducts.has(product.id) && (
-									<div className="mt-2 text-gray-700 text-xs">
-										<p>
-											<span className="font-semibold">Category:</span>{" "}
-											{product.category}
-										</p>
-
-										{/* Base product details */}
-										<div className="mb-2">
-											{product.color && (
-												<p>
-													<span className="font-semibold">Color:</span>{" "}
-													{product.color}
-												</p>
-											)}
-											{product.capacity && (
-												<p>
-													<span className="font-semibold">Capacity:</span>{" "}
-													{product.capacity}
-												</p>
-											)}
-											{product.memory && (
-												<p>
-													<span className="font-semibold">Memory:</span>{" "}
-													{product.memory}
-												</p>
-											)}
-											{product.screen_size && (
-												<p>
-													<span className="font-semibold">Screen Size:</span>{" "}
-													{product.screen_size}
-												</p>
-											)}
-											{product.weight && (
-												<p>
-													<span className="font-semibold">Weight:</span>{" "}
-													{product.weight}
-												</p>
-											)}
-											{product.power && (
-												<p>
-													<span className="font-semibold">Power:</span>{" "}
-													{product.power}
-												</p>
-											)}
-										</div>
-
-										{/* Render specifications and features as markdown */}
-										{(product.specifications_markdown ||
-											product.features_markdown) && (
-											<div className="prose prose-sm mt-3 max-w-none">
-												{product.specifications_markdown && (
-													<ReactMarkdown
-														remarkPlugins={[remarkGfm]}
-														rehypePlugins={[rehypeRaw, rehypeSanitize]}
-														components={markdownComponents}
-													>
-														{product.specifications_markdown}
-													</ReactMarkdown>
-												)}
-
-												{product.features_markdown && (
-													<ReactMarkdown
-														remarkPlugins={[remarkGfm]}
-														rehypePlugins={[rehypeRaw, rehypeSanitize]}
-														components={markdownComponents}
-													>
-														{product.features_markdown}
-													</ReactMarkdown>
-												)}
-											</div>
-										)}
-
-										<a
-											href={product.product_url}
-											target="_blank"
-											rel="noopener noreferrer"
-											className="mt-2 block text-blue-500 hover:underline"
-										>
-											View on Compy →
-										</a>
-									</div>
-								)}
-							</div>
-						</div>
-					))}
-				</div>
-			);
-		}
-		return null;
-	};
-
 	return (
-		<div className="mx-auto flex h-[90vh] w-full max-w-4xl flex-col p-4">
-			<h1 className="mb-4 font-bold text-xl">Compy Product Assistant</h1>
+		<div className="mx-auto flex h-[90vh] w-full max-w-5xl flex-col p-6">
+			<h1 className="mb-6 font-bold text-2xl">Compy Product Assistant</h1>
 
-			<div className="mb-4 flex-1 space-y-4 overflow-y-auto rounded-lg border p-4">
+			<div className="mb-6 flex-1 space-y-4 overflow-y-auto rounded-lg border bg-gray-50 p-6 shadow-sm">
 				{messages.length === 0 && (
-					<div className="py-12 text-center text-gray-500">
-						<p>Ask me about products! For example:</p>
-						<ul className="mt-2 space-y-1 text-sm">
-							<li>"Find me a Samsung TV"</li>
-							<li>"What's the best washing machine under S/1000?"</li>
-							<li>"Show me refrigerators from Indurama"</li>
-						</ul>
+					<div className="flex h-full flex-col items-center justify-center gap-3">
+						<div className="flex items-center gap-2 text-gray-400">
+							<Sparkles className="h-8 w-8" />
+							<span className="text-2xl">Compy AI</span>
+						</div>
 					</div>
 				)}
 
@@ -270,10 +165,10 @@ export default function ChatPage() {
 						className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
 					>
 						<div
-							className={`max-w-[85%] rounded-lg p-3 ${
+							className={`max-w-[85%] rounded-lg p-4 shadow-sm ${
 								message.role === "user"
-									? "bg-blue-500 text-white"
-									: "bg-gray-200 text-black"
+									? "bg-blue-600 text-white"
+									: "bg-white text-black"
 							}`}
 						>
 							{message.content ? (
@@ -291,9 +186,6 @@ export default function ChatPage() {
 									Searching for products...
 								</div>
 							)}
-
-							{/* Display product cards if available */}
-							{message.role === "assistant" && renderProductCards(message)}
 						</div>
 					</div>
 				))}
@@ -301,7 +193,7 @@ export default function ChatPage() {
 				{status === "streaming" &&
 					messages[messages.length - 1]?.role !== "assistant" && (
 						<div className="flex justify-start">
-							<div className="max-w-[80%] rounded-lg bg-gray-200 p-3">
+							<div className="max-w-[80%] rounded-lg bg-white p-4 shadow-sm">
 								<div className="flex animate-pulse space-x-2">
 									<div className="h-2 w-2 rounded-full bg-gray-500" />
 									<div className="h-2 w-2 rounded-full bg-gray-500" />
@@ -312,22 +204,44 @@ export default function ChatPage() {
 					)}
 			</div>
 
-			<form onSubmit={handleSubmit} className="flex gap-2">
-				<input
-					type="text"
-					value={input}
-					onChange={handleInputChange}
-					placeholder="Ask about products..."
-					className="flex-1 rounded-md border p-2"
-				/>
-				<button
-					type="submit"
-					disabled={status === "streaming" || !input.trim()}
-					className="rounded-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 disabled:opacity-50"
-				>
-					Send
-				</button>
-			</form>
+			<div className="space-y-4">
+				{/* ChatGPT-style suggestions */}
+				{messages.length === 0 && (
+					<div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-4">
+						<Suggestion
+							text="Lavadoras para solteros por menos de 800 soles"
+							onClick={handleSuggestionClick}
+						/>
+						<Suggestion
+							text="Refrigeradores economicos"
+							onClick={handleSuggestionClick}
+						/>
+						<Suggestion
+							text="Televisores de 32 pulgadas"
+							onClick={handleSuggestionClick}
+						/>
+						<Suggestion
+							text="Aspiradoras baratas"
+							onClick={handleSuggestionClick}
+						/>
+					</div>
+				)}
+
+				<form onSubmit={handleSubmit} className="flex gap-3">
+					<Input
+						value={input}
+						onChange={handleInputChange}
+						placeholder="Ask about products..."
+						className="flex-1"
+					/>
+					<Button
+						type="submit"
+						disabled={status === "streaming" || !input.trim()}
+					>
+						Send
+					</Button>
+				</form>
+			</div>
 		</div>
 	);
 }
