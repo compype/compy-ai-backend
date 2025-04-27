@@ -110,11 +110,6 @@ interface EnhancedProduct {
 	url_search: string;
 }
 
-interface ProductsData {
-	hits?: Product[]; // Original structure
-	products?: EnhancedProduct[]; // New structure
-}
-
 interface ProductForEmbedding {
 	id: string;
 	metadata: {
@@ -183,7 +178,7 @@ function generateProductForEmbedding(
 	} = product;
 
 	// Generate unique ID
-	const id = _id?.$oid || url.split("/").pop() || `product-${index}`;
+	const id = (_id?.$oid || url.split("/").pop()) ?? `product-${index}`;
 
 	// Collect all specs from the specs array if available
 	let allSpecs: Array<{ k: string; v: string }> = [];
@@ -194,20 +189,20 @@ function generateProductForEmbedding(
 	// Extract common metadata from specs
 	const color = extractSpecValue(allSpecs, "color");
 	const capacity =
-		extractSpecValue(allSpecs, "capacidad") ||
-		extractSpecValue(allSpecs, "memoria") ||
+		extractSpecValue(allSpecs, "capacidad") ??
+		extractSpecValue(allSpecs, "memoria") ??
 		extractSpecValue(allSpecs, "almacenamiento");
 	const memory = extractSpecValue(allSpecs, "memoria ram");
 	const screenSize =
-		extractSpecValue(allSpecs, "tamaño de la pantalla") ||
-		extractSpecValue(allSpecs, "tamaño pantalla") ||
+		extractSpecValue(allSpecs, "tamaño de la pantalla") ??
+		extractSpecValue(allSpecs, "tamaño pantalla") ??
 		extractSpecValue(allSpecs, "pulgadas");
 	const weight = extractSpecValue(allSpecs, "peso");
 	const power =
-		extractSpecValue(allSpecs, "potencia") ||
+		extractSpecValue(allSpecs, "potencia") ??
 		extractSpecValue(allSpecs, "potencia de parlantes");
 	const resolution =
-		extractSpecValue(allSpecs, "resolución de imagen") ||
+		extractSpecValue(allSpecs, "resolución de imagen") ??
 		extractSpecValue(allSpecs, "resolución");
 
 	// Start with product title, brand, model and price
@@ -235,7 +230,7 @@ function generateProductForEmbedding(
 		}
 	}
 
-	markdown += `\n`;
+	markdown += "\n";
 
 	// Add category information
 	markdown += `**Category**: ${categories.level1} > ${categories.level2} > ${categories.level3}\n\n`;
@@ -286,7 +281,7 @@ function generateProductForEmbedding(
 		sectionSpecs: Array<{ k: string; v: string }>,
 	) => {
 		if (sectionSpecs.length > 0) {
-			markdown += "### " + sectionTitle + "\n\n";
+			markdown += `### ${sectionTitle}\n\n`;
 			markdown += "| Specification | Value |\n";
 			markdown += "| ------------- | ----- |\n";
 
@@ -329,7 +324,7 @@ function generateProductForEmbedding(
 		const sortedSkus = [...skus].sort((a, b) => a.bestprice - b.bestprice);
 
 		for (const sku of sortedSkus) {
-			markdown += `| [${sku.store}](${sku.url}) | S/ ${sku.bestprice.toFixed(2)} | ${sku.stock || "N/A"} |\n`;
+			markdown += `| [${sku.store}](${sku.url}) | S/ ${sku.bestprice.toFixed(2)} | ${sku.stock ?? "N/A"} |\n`;
 		}
 		markdown += "\n";
 	}
@@ -518,10 +513,10 @@ async function main() {
 		// Read the products.json file
 		const filePath = join(__dirname, "data", "tech-products.json");
 		const fileContent = readFileSync(filePath, "utf8");
-		const productsData: ProductsData = JSON.parse(fileContent);
+		const productsData = JSON.parse(fileContent);
 
 		// Handle both old and new data structures
-		const products = productsData;
+		const products = productsData as Product[];
 
 		// Generate product objects with metadata and context for each product
 		const productsForEmbedding = products.map((product, index) =>
