@@ -224,11 +224,11 @@ export default function ChatPage() {
 							onClick={handleSuggestionClick}
 						/>
 						<Suggestion
-							text="Televisores de 32 pulgadas"
+							text="Televisores de 50 pulgadas"
 							onClick={handleSuggestionClick}
 						/>
 						<Suggestion
-							text="Aspiradoras baratas"
+							text="iPhone 12 o 13 por menos de 2000 soles"
 							onClick={handleSuggestionClick}
 						/>
 					</div>
