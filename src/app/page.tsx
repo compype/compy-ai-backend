@@ -1,10 +1,16 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { useChat } from "@ai-sdk/react";
 import type { Message as UIMessage } from "@ai-sdk/react";
-import { ChevronRight, ExternalLink, Sparkles } from "lucide-react";
+import {
+	ChevronRight,
+	ExternalLink,
+	Send,
+	Sparkles,
+	Square,
+} from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import type { Components } from "react-markdown";
 import rehypeRaw from "rehype-raw";
@@ -60,9 +66,10 @@ function Suggestion({ text, onClick }: SuggestionProps) {
 }
 
 export default function ChatPage() {
-	const { messages, input, handleInputChange, handleSubmit, status } = useChat({
-		maxSteps: 3, // Allow multi-step tool calls
-	});
+	const { messages, input, handleInputChange, handleSubmit, status, stop } =
+		useChat({
+			maxSteps: 3, // Allow multi-step tool calls
+		});
 
 	// Function to handle suggestion clicks
 	const handleSuggestionClick = (text: string) => {
@@ -227,19 +234,41 @@ export default function ChatPage() {
 					</div>
 				)}
 
-				<form onSubmit={handleSubmit} className="flex gap-3">
-					<Input
+				<form onSubmit={handleSubmit} className="relative">
+					<Textarea
 						value={input}
 						onChange={handleInputChange}
 						placeholder="Pregunta sobre productos..."
-						className="flex-1"
+						className="max-h-[120px] min-h-[50px] flex-1 resize-none rounded-lg pr-12"
+						onKeyDown={(e) => {
+							if (e.key === "Enter" && !e.shiftKey) {
+								e.preventDefault();
+								handleSubmit(e as unknown as React.FormEvent);
+							}
+						}}
 					/>
-					<Button
-						type="submit"
-						disabled={status === "streaming" || !input.trim()}
-					>
-						Enviar
-					</Button>
+					<div className="absolute right-2 bottom-2">
+						{status === "streaming" ? (
+							<Button
+								type="button"
+								size="icon"
+								variant="ghost"
+								onClick={stop}
+								className="h-8 w-8 rounded-full bg-red-100 text-red-600 hover:bg-red-200"
+							>
+								<Square className="h-4 w-4" />
+							</Button>
+						) : (
+							<Button
+								type="submit"
+								size="icon"
+								disabled={!input.trim()}
+								className="h-8 w-8 rounded-full bg-blue-600 text-white hover:bg-blue-700"
+							>
+								<Send className="h-4 w-4" />
+							</Button>
+						)}
+					</div>
 				</form>
 			</div>
 		</div>
