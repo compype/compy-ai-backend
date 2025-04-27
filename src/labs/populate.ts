@@ -10,11 +10,17 @@ async function main() {
 		),
 	);
 	await vectorIndex.upsert(
-		products.map((product) => ({
-			id: product.id,
-			data: product.context,
-			metadata: product.metadata,
-		})),
+		products.map(
+			(product: {
+				id: string;
+				context: string;
+				metadata: Record<string, string>;
+			}) => ({
+				id: product.id,
+				data: product.context,
+				metadata: product.metadata,
+			}),
+		),
 	);
 }
 
