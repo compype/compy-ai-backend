@@ -147,7 +147,7 @@ export default function ChatPage() {
 
 	return (
 		<div className="mx-auto flex h-[90vh] w-full max-w-5xl flex-col p-6">
-			<h1 className="mb-6 font-bold text-2xl">Compy Product Assistant</h1>
+			<h1 className="mb-6 font-bold text-2xl">Compy AI</h1>
 
 			<div className="mb-6 flex-1 space-y-4 overflow-y-auto rounded-lg border bg-gray-50 p-6 shadow-sm">
 				{messages.length === 0 && (
@@ -183,7 +183,7 @@ export default function ChatPage() {
 								</div>
 							) : (
 								<div className="text-sm italic opacity-70">
-									Searching for products...
+									Buscando productos...
 								</div>
 							)}
 						</div>
@@ -231,14 +231,14 @@ export default function ChatPage() {
 					<Input
 						value={input}
 						onChange={handleInputChange}
-						placeholder="Ask about products..."
+						placeholder="Pregunta sobre productos..."
 						className="flex-1"
 					/>
 					<Button
 						type="submit"
 						disabled={status === "streaming" || !input.trim()}
 					>
-						Send
+						Enviar
 					</Button>
 				</form>
 			</div>
