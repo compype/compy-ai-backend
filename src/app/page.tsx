@@ -226,7 +226,7 @@ export default function ChatPage() {
 							}`}
 						>
 							{message.content ? (
-								<div className="prose prose-sm max-w-none">
+								<div className="prose prose-sm max-w-none overflow-x-auto">
 									<ReactMarkdown
 										remarkPlugins={[remarkGfm]}
 										rehypePlugins={[rehypeRaw, rehypeSanitize]}

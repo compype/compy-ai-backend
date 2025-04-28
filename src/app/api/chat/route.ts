@@ -103,6 +103,8 @@ export async function POST(req: Request) {
     - If a product has price history data, mention the lowest historical price and percentage savings
     - For multiple products, present a numbered list with brief descriptions
     - Include a comparison table if showing multiple similar products
+		- Include images when possible
+		- Answer in the same language as the user's query
     
     PRICE INFORMATION:
     - ALWAYS prioritize sharing historical price data - this is Compy's most valuable service to users
