@@ -137,13 +137,13 @@ export default function ChatPage() {
 			<img
 				{...props}
 				alt={props.alt ?? "Product image"}
-				className="mx-auto max-h-[300px] rounded-md object-contain relative my-2"
+				className="relative mx-auto my-2 max-h-[300px] rounded-md object-contain"
 			/>
 		),
 		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		table: (props: any) => (
 			<table
-				className="my-4 min-w-full divide-y divide-gray-300 rounded-lg border overflow-x-auto"
+				className="my-4 min-w-full divide-y divide-gray-300 overflow-x-auto rounded-lg border"
 				{...props}
 			/>
 		),
