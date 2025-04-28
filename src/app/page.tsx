@@ -52,7 +52,7 @@ interface SuggestionProps {
 	onClick: (text: string) => void;
 }
 
-function Suggestion({ text, onClick }: SuggestionProps) {
+function Suggestion({ text, onClick }: Readonly<SuggestionProps>) {
 	return (
 		<button
 			type="button"
@@ -66,10 +66,17 @@ function Suggestion({ text, onClick }: SuggestionProps) {
 }
 
 export default function ChatPage() {
-	const { messages, input, handleInputChange, handleSubmit, status, stop } =
-		useChat({
-			maxSteps: 3, // Allow multi-step tool calls
-		});
+	const {
+		messages,
+		input,
+		handleInputChange,
+		handleSubmit,
+		status,
+		stop,
+		error,
+	} = useChat({
+		maxSteps: 3, // Allow multi-step tool calls
+	});
 
 	// Function to handle suggestion clicks
 	const handleSuggestionClick = (text: string) => {
@@ -78,26 +85,67 @@ export default function ChatPage() {
 		} as React.ChangeEvent<HTMLInputElement>);
 	};
 
+	// Check if the error is a rate limit error (HTTP 429)
+	const isRateLimitError =
+		error && /429|too many requests/i.test(String(error.message || ""));
+
+	// Get retry time from error response if available
+	const getRetrySeconds = () => {
+		if (!error) return 60; // Default to 60 seconds
+
+		try {
+			// Try to extract resetSeconds from error message if it's JSON
+			if (
+				typeof error.message === "string" &&
+				error.message.includes("resetSeconds")
+			) {
+				const match = RegExp(/"resetSeconds":(\d+)/).exec(error.message);
+				if (match?.[1]) {
+					return Number.parseInt(match[1], 10);
+				}
+			}
+
+			// Fallback to using reset timestamp if available
+			if (
+				typeof error.message === "string" &&
+				error.message.includes("reset")
+			) {
+				const match = RegExp(/"reset":"([^"]+)"/).exec(error.message);
+				if (match?.[1]) {
+					const resetTime = new Date(match[1]).getTime();
+					const now = Date.now();
+					return Math.max(1, Math.ceil((resetTime - now) / 1000));
+				}
+			}
+		} catch (e) {
+			console.error(e);
+		}
+
+		return 60; // Default fallback
+	};
+
+	// Format the wait time message
+	const formatRateLimitMessage = () => {
+		const seconds = getRetrySeconds();
+		return `Please try again in ${seconds} second${seconds !== 1 ? "s" : ""}.`;
+	};
+
 	// Custom renderers for markdown components
 	const markdownComponents: Components = {
 		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		img: (props: any) => (
-			<div className="relative my-2">
-				<img
-					{...props}
-					alt={props.alt || "Product image"}
-					className="mx-auto max-h-[300px] rounded-md object-contain"
-				/>
-			</div>
+			<img
+				{...props}
+				alt={props.alt ?? "Product image"}
+				className="mx-auto max-h-[300px] rounded-md object-contain relative my-2"
+			/>
 		),
 		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		table: (props: any) => (
-			<div className="my-4 overflow-x-auto">
-				<table
-					className="min-w-full divide-y divide-gray-300 rounded-lg border"
-					{...props}
-				/>
-			</div>
+			<table
+				className="my-4 min-w-full divide-y divide-gray-300 rounded-lg border overflow-x-auto"
+				{...props}
+			/>
 		),
 		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		thead: (props: any) => <thead className="bg-gray-100" {...props} />,
@@ -119,7 +167,6 @@ export default function ChatPage() {
 		tr: (props: any) => <tr className="even:bg-gray-50" {...props} />,
 		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 		a: (props: any) => {
-			console.log(props);
 			// Check if this is a "View Product" link
 			const isViewProductLink = props.href.includes(
 				"compy.pe/galeria/producto",
@@ -270,6 +317,35 @@ export default function ChatPage() {
 						)}
 					</div>
 				</form>
+
+				{/* Rate limit error notification */}
+				{isRateLimitError && (
+					<div className="mt-2 rounded-md bg-red-50 p-3 text-red-600 shadow-sm">
+						<div className="flex items-center gap-2 font-medium">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="16"
+								height="16"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								strokeWidth="2"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								aria-hidden="true"
+							>
+								<circle cx="12" cy="12" r="10" />
+								<line x1="12" y1="8" x2="12" y2="12" />
+								<line x1="12" y1="16" x2="12.01" y2="16" />
+							</svg>
+							Rate limit exceeded
+						</div>
+						<p className="mt-1 text-sm">
+							You've reached the maximum number of requests allowed.{" "}
+							{formatRateLimitMessage()}
+						</p>
+					</div>
+				)}
 			</div>
 		</div>
 	);

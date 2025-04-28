@@ -1,7 +1,18 @@
 import { vectorIndex } from "@/lib/vector";
 import { openai } from "@ai-sdk/openai";
+import { Ratelimit } from "@upstash/ratelimit";
+import { Redis } from "@upstash/redis";
 import { streamText, tool } from "ai";
 import { z } from "zod";
+
+// Initialize Upstash Redis and Ratelimit
+const redis = Redis.fromEnv();
+const ratelimit = new Ratelimit({
+	redis,
+	limiter: Ratelimit.slidingWindow(20, "1 m"), // 20 requests per minute
+	analytics: true,
+	prefix: "@compy/chat",
+});
 
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
@@ -21,6 +32,47 @@ interface StoreInfo {
 }
 
 export async function POST(req: Request) {
+	// Get user information for rate limiting
+	const ip = req.headers.get("x-forwarded-for") ?? "anonymous";
+	const userAgent = req.headers.get("user-agent") ?? "unknown";
+
+	// Create a hash from IP and user agent for rate limiting
+	const identifier = `${ip}:${userAgent}`;
+
+	// Apply rate limiting
+	const { success, limit, reset, remaining, pending } =
+		await ratelimit.limit(identifier);
+
+	// Ensure rate limit operations complete in serverless environment
+	// @ts-ignore - Vercel specific API
+	if (pending && req.waitUntil) {
+		// @ts-ignore - Vercel specific API
+		req.waitUntil(pending);
+	}
+
+	// If rate limit exceeded, return 429 Too Many Requests
+	if (!success) {
+		return new Response(
+			JSON.stringify({
+				error: "Too many requests",
+				message: "You've reached the maximum number of requests allowed.",
+				limit,
+				remaining,
+				reset: new Date(reset).toISOString(),
+				resetSeconds: Math.ceil((reset - Date.now()) / 1000),
+			}),
+			{
+				status: 429,
+				headers: {
+					"Content-Type": "application/json",
+					"X-RateLimit-Limit": limit.toString(),
+					"X-RateLimit-Remaining": remaining.toString(),
+					"X-RateLimit-Reset": new Date(reset).toISOString(),
+				},
+			},
+		);
+	}
+
 	const { messages } = await req.json();
 
 	const result = streamText({
