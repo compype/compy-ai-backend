@@ -263,15 +263,15 @@ export default function ChatPage() {
 				{messages.length === 0 && (
 					<div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-4">
 						<Suggestion
-							text="Lavadoras para solteros por menos de 800 soles"
+							text="Smartphones de gama media por menos de 800 soles"
 							onClick={handleSuggestionClick}
 						/>
 						<Suggestion
-							text="Refrigeradores economicos"
+							text="Televisores LG de 60 pulgadas"
 							onClick={handleSuggestionClick}
 						/>
 						<Suggestion
-							text="Televisores de 50 pulgadas"
+							text="Televisores OLED de 55 pulgadas"
 							onClick={handleSuggestionClick}
 						/>
 						<Suggestion
