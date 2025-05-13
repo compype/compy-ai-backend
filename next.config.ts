@@ -9,7 +9,9 @@ const nextConfig: NextConfig = {
 				headers: [
 					{
 						key: "Access-Control-Allow-Origin",
-						value: "https://compy.cueva.io",
+						value: process.env.NODE_ENV === "development"
+							? "http://localhost:5173"
+							: "https://compy.cueva.io",
 					},
 					{
 						key: "Access-Control-Allow-Methods",

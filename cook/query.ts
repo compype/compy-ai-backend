@@ -1,5 +1,5 @@
 const myHeaders = new Headers();
-myHeaders.append("X-TYPESENSE-API-KEY", "'SEARCHGLOBAL'");
+myHeaders.append("X-TYPESENSE-API-KEY", process.env.TYPESENSE_API_KEY || "");
 
 const requestOptions: RequestInit = {
   method: "GET",
@@ -9,10 +9,10 @@ const requestOptions: RequestInit = {
 
 const searchParams = new URLSearchParams({
   q: "celular",
-  filter_by: "bestprice:<1000&&brand:SAMSUNG",
+  filter_by: "brand:SAMSUNG",
   query_by: "title,repmodel",
   sort_by: "top:desc,percent_offer:desc",
-  per_page: "10"
+  per_page: "250"
 });
 
 fetch(`http://typesense-app-autoscaling-lb-290518720.us-west-2.elb.amazonaws.com/collections/products2/documents/search?${searchParams.toString()}`, requestOptions)

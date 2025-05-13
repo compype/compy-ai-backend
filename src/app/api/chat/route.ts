@@ -16,20 +16,6 @@ const ratelimit = new Ratelimit({
 // Allow streaming responses up to 30 seconds
 export const maxDuration = 30;
 
-// Define interfaces for the metadata types
-interface PriceHistory {
-	current: number;
-	previous: number;
-	minimum: number;
-	percent_save?: number;
-}
-
-interface StoreInfo {
-	store: string;
-	price: number;
-	url: string;
-}
-
 export async function POST(req: Request) {
 	// Get user information for rate limiting
 	const ip = req.headers.get("x-forwarded-for") ?? "anonymous";
@@ -209,61 +195,4 @@ export async function POST(req: Request) {
 	});
 
 	return result.toDataStreamResponse();
-}
-
-// Helper function to format specifications as a markdown table
-function formatSpecsAsMarkdown(
-	specs: Record<string, unknown> | Array<{ k: string; v: string }> | unknown,
-): string {
-	if (!specs || typeof specs !== "object") return "";
-
-	let markdown = "### Specifications\n\n";
-	markdown += "| Specification | Value |\n";
-	markdown += "| ------------- | ----- |\n";
-
-	// If specs is an array of key-value objects
-	if (Array.isArray(specs)) {
-		for (const spec of specs) {
-			if (spec.k && spec.v) {
-				markdown += `| ${spec.k} | ${spec.v} |\n`;
-			}
-		}
-	} else {
-		// If specs is a key-value object
-		for (const [key, value] of Object.entries(specs)) {
-			markdown += `| ${key} | ${value} |\n`;
-		}
-	}
-
-	return markdown;
-}
-
-// Helper function to format features as a markdown list
-function formatFeaturesAsMarkdown(
-	features: string | string[] | Record<string, unknown> | unknown,
-): string {
-	if (!features) return "";
-
-	let markdown = "### Key Features\n\n";
-
-	if (typeof features === "string") {
-		// If features is just a string, format it directly
-		markdown += features
-			.split(".")
-			.filter((f) => f.trim())
-			.map((f) => `- ${f.trim()}`)
-			.join("\n");
-	} else if (Array.isArray(features)) {
-		// If features is an array
-		markdown += features.map((f) => `- ${f}`).join("\n");
-	} else if (typeof features === "object") {
-		// If features is an object
-		for (const [key, value] of Object.entries(
-			features as Record<string, unknown>,
-		)) {
-			markdown += `- **${key}**: ${value}\n`;
-		}
-	}
-
-	return markdown;
 }
