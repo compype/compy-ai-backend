@@ -158,8 +158,12 @@ export async function POST(req: Request) {
 						.number()
 						.optional()
 						.describe("Maximum price to filter by"),
+					priceMin: z
+						.number()
+						.optional()
+						.describe("Minimum price to filter by"),
 				}),
-				execute: async ({ query, brand, priceMax }) => {
+				execute: async ({ query, brand, priceMax, priceMin }) => {
 
 					const myHeaders = new Headers();
 					myHeaders.append("X-TYPESENSE-API-KEY", process.env.TYPESENSE_API_KEY || "");
@@ -177,6 +181,10 @@ export async function POST(req: Request) {
 
 					if (priceMax) {
 						queryByItems.push(`bestprice:<${priceMax}`);
+					}
+
+					if (priceMin) {
+						queryByItems.push(`bestprice:>${priceMin}`);
 					}
 
 					const searchParams = new URLSearchParams({
