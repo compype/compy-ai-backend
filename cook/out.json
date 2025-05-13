@@ -1,0 +1,784 @@
+{
+	"facet_counts": [],
+	"found": 331,
+	"hits": [
+		{
+			"document": {
+				"active": true,
+				"bestprice": 854.9,
+				"brand": "SAMSUNG",
+				"categories": {
+					"level1": "Tecnologia",
+					"level2": "Telefonia",
+					"level3": "Smartphones"
+				},
+				"competitors": "Shopstar",
+				"entrepreneur": 0,
+				"f.Capacidad": "NO ESPECIFICA",
+				"f.Memoria Ram": "8GB",
+				"f.Tamaño de la pantalla": "NO ESPECIFICA",
+				"filtercategory": "Telefonia",
+				"id": "676ad0404bacf2f3cd0c6a48",
+				"images": [
+					"https://mercury.vteximg.com.br/arquivos/ids/20651742/image-0050309f89454b3c8d914faefae53559.jpg?v=638808473001300000",
+					"https://mercury.vteximg.com.br/arquivos/ids/20651738/image-76b36bd09ba44271948492819d62fdd2.jpg?v=638808473000370000",
+					"https://mercury.vteximg.com.br/arquivos/ids/20651739/image-4defa4852a864337b49044939d15a90f.jpg?v=638808473000430000",
+					"https://mercury.vteximg.com.br/arquivos/ids/20651740/image-40879511347d472b8501da950f5211e2.jpg?v=638808473000970000",
+					"https://mercury.vteximg.com.br/arquivos/ids/20651741/image-34b613aa3dac4444bd725d02f804cf9a.jpg?v=638808473001200000",
+					"https://mercury.vteximg.com.br/arquivos/ids/20651743/image-fdf00d9c487d4d96a24ca4d428b902fa.jpg?v=638808473001830000"
+				],
+				"last_update_date": "2025-05-13T00:00:00",
+				"metrics": {
+					"amt_change": 0.0,
+					"amt_change_text": "No bajó de precio",
+					"isminimum": false,
+					"median_hist": 854.9,
+					"percent_change": 0.0,
+					"percent_offer": 0.0,
+					"percent_save": 1.4558574343250372,
+					"prev_price": 854.9,
+					"price_minimum": 499.01
+				},
+				"numtiendas": 2,
+				"percent_change": 0,
+				"percent_offer": 0,
+				"repmodel": "GALAXY A16",
+				"spider": "shopstarpriority",
+				"stores": ["Shopstar"],
+				"tags": ["Tecnologia", "Telefonia", "Smartphones"],
+				"title": "Celular Samsung Galaxy A16 4G 256GB, 8GB RAM, cámara principal 50MP + 5MP + 2MP, frontal 13MP, 6.7\", negro",
+				"top": 1,
+				"topstore": "Shopstar",
+				"toptitle": "Celular Samsung Galaxy A16 4G 256GB, 8GB RAM, cámara principal 50MP + 5MP + 2MP, frontal 13MP, 6.7\", negro",
+				"updated": 1747132367,
+				"url": "https://www.shopstar.pe/celular-samsung-galaxy-a16-4g-256gb-8gb-ram-camara-principal-50mp---5mp---2mp-frontal-13mp-6-7--negro-16455583/p",
+				"url_compy": "https://compy.pe/galeria/producto/676ad0404bacf2f3cd0c6a48",
+				"urls": [
+					"https://shopstar.pe/celular-samsung-galaxy-a16-4g-256gb-8gb-ram-camara-principal-50mp---5mp---2mp-frontal-13mp-6-7--negro-16455583/p",
+					"https://shopstar.pe/smartphone-samsung-galaxy-a16-6-7--8gb-256gb-50mp---5mp---2mp-negro-16479627/p"
+				]
+			},
+			"highlight": {
+				"title": {
+					"matched_tokens": ["Celular"],
+					"snippet": "<mark>Celular</mark> Samsung Galaxy A16 4G 256GB, 8GB RAM, cámara principal 50MP + 5MP + 2MP, frontal 13MP, 6.7\", negro"
+				}
+			},
+			"highlights": [
+				{
+					"field": "title",
+					"matched_tokens": ["Celular"],
+					"snippet": "<mark>Celular</mark> Samsung Galaxy A16 4G 256GB, 8GB RAM, cámara principal 50MP + 5MP + 2MP, frontal 13MP, 6.7\", negro"
+				}
+			],
+			"text_match": 578730123365187705,
+			"text_match_info": {
+				"best_field_score": "1108091338752",
+				"best_field_weight": 15,
+				"fields_matched": 1,
+				"score": "578730123365187705",
+				"tokens_matched": 1
+			}
+		},
+		{
+			"document": {
+				"active": true,
+				"bestprice": 319.0,
+				"brand": "MOTOROLA",
+				"categories": {
+					"level1": "Tecnologia",
+					"level2": "Telefonia",
+					"level3": "Smartphones"
+				},
+				"competitors": "Falabella",
+				"entrepreneur": 0,
+				"f.Capacidad": "NO ESPECIFICA",
+				"f.Memoria Ram": "2GB",
+				"f.Tamaño de la pantalla": "NO ESPECIFICA",
+				"filtercategory": "Telefonia",
+				"id": "66928de1e31deadfcaf78209",
+				"images": [
+					"https://www.falabella.com.pe/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/143609674_01/public?wid=800&hei=800&qlt=70",
+					"https://www.falabella.com.pe/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/143609674_02/public?wid=800&hei=800&qlt=70",
+					"https://www.falabella.com.pe/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/143609674_03/public?wid=800&hei=800&qlt=70"
+				],
+				"last_update_date": "2025-05-13T00:00:00",
+				"metrics": {
+					"amt_change": -660.0,
+					"amt_change_text": "Bajó más de S/500",
+					"isminimum": false,
+					"median_hist": 979.0,
+					"percent_change": -67.41573033707866,
+					"percent_offer": 67.41573033707866,
+					"percent_save": 67.41573033707866,
+					"prev_price": 979.0,
+					"price_minimum": 279.0
+				},
+				"numtiendas": 3,
+				"percent_change": -67,
+				"percent_offer": 67,
+				"repmodel": "E14",
+				"spider": "falabellapriority",
+				"stores": ["Falabella"],
+				"tags": [
+					"Tecnologia",
+					"Telefonia",
+					"Smartphones",
+					"Computo",
+					"Monitores"
+				],
+				"title": "Celular Moto E14 2GB 64GB Gris",
+				"topstore": "Falabella",
+				"toptitle": "Celular Moto E14 2GB 64GB Gris",
+				"updated": 1747136557,
+				"url": "https://www.falabella.com.pe/falabella-pe/product/143609673/Celular-Moto-E14-2GB-64GB-Gris",
+				"url_compy": "https://compy.pe/galeria/producto/66928de1e31deadfcaf78209",
+				"urls": [
+					"https://www.falabella.com.pe/falabella-pe/product/143609673/Celular-Moto-E14-2GB-64GB-Gris",
+					"https://www.falabella.com.pe/falabella-pe/product/139867170/Monitor-HP-E14-Portatil-G4-14-FHD-1920-x-1080-USB-C",
+					"https://www.falabella.com.pe/falabella-pe/product/139867108/Monitor-HP-E14-Portatil-G4-14-FHD-1920-x-1080-USB-C"
+				]
+			},
+			"highlight": {
+				"title": {
+					"matched_tokens": ["Celular"],
+					"snippet": "<mark>Celular</mark> Moto E14 2GB 64GB Gris"
+				}
+			},
+			"highlights": [
+				{
+					"field": "title",
+					"matched_tokens": ["Celular"],
+					"snippet": "<mark>Celular</mark> Moto E14 2GB 64GB Gris"
+				}
+			],
+			"text_match": 578730123365187705,
+			"text_match_info": {
+				"best_field_score": "1108091338752",
+				"best_field_weight": 15,
+				"fields_matched": 1,
+				"score": "578730123365187705",
+				"tokens_matched": 1
+			}
+		},
+		{
+			"document": {
+				"active": true,
+				"bestprice": 699.0,
+				"brand": "OPPO",
+				"categories": {
+					"level1": "Tecnologia",
+					"level2": "Telefonia",
+					"level3": "Smartphones"
+				},
+				"competitors": "Falabella",
+				"entrepreneur": 0,
+				"f.Capacidad": "NO ESPECIFICA",
+				"f.Memoria Ram": "6GB",
+				"f.Tamaño de la pantalla": "NO ESPECIFICA",
+				"filtercategory": "Telefonia",
+				"id": "67f86646fcfce8c9a29409fe",
+				"images": [
+					"https://media.falabella.com.pe/falabellaPE/143136052_01/public?wid=800&hei=800&qlt=70",
+					"https://media.falabella.com.pe/falabellaPE/143136052_02/public?wid=800&hei=800&qlt=70",
+					"https://media.falabella.com.pe/falabellaPE/143136052_03/public?wid=800&hei=800&qlt=70",
+					"https://media.falabella.com.pe/falabellaPE/143136052_04/public?wid=800&hei=800&qlt=70",
+					"https://media.falabella.com.pe/falabellaPE/143136052_05/public?wid=800&hei=800&qlt=70"
+				],
+				"last_update_date": "2025-05-13T00:00:00",
+				"metrics": {
+					"amt_change": 0.0,
+					"amt_change_text": "No bajó de precio",
+					"isminimum": true,
+					"median_hist": 1156.5652173913043,
+					"percent_change": 0.0,
+					"percent_offer": 39.56242246532085,
+					"percent_save": 0.0,
+					"prev_price": 699.0,
+					"price_minimum": 699.0
+				},
+				"numtiendas": 1,
+				"percent_change": 0,
+				"percent_offer": 40,
+				"repmodel": "OPPO RENO 7 6RAM 128GB NEGRO",
+				"spider": "falabellapriority",
+				"stores": ["Falabella"],
+				"tags": ["Tecnologia", "Telefonia", "Smartphones"],
+				"title": "Celular Oppo Reno 7 128GB, 6GB ram, cámara principal 64 + 2 + 2MP, frontal 32MP, 6.43\", negro",
+				"topstore": "Falabella",
+				"toptitle": "Celular Oppo Reno 7 128GB, 6GB ram, cámara principal 64 + 2 + 2MP, frontal 32MP, 6.43\", negro",
+				"updated": 1747135281,
+				"url": "https://www.falabella.com.pe/falabella-pe/product/143136051/Celular-Oppo-Reno-7-128GB,-6GB-ram,-camara-principal-64-+-2-+-2MP,-frontal-32MP,-6.43-,-negro",
+				"url_compy": "https://compy.pe/galeria/producto/67f86646fcfce8c9a29409fe",
+				"urls": [
+					"https://www.falabella.com.pe/falabella-pe/product/143136051/Celular-Oppo-Reno-7-128GB,-6GB-ram,-camara-principal-64-+-2-+-2MP,-frontal-32MP,-6.43-,-negro"
+				]
+			},
+			"highlight": {
+				"title": {
+					"matched_tokens": ["Celular"],
+					"snippet": "<mark>Celular</mark> Oppo Reno 7 128GB, 6GB ram, cámara principal 64 + 2 + 2MP, frontal 32MP, 6.43\", negro"
+				}
+			},
+			"highlights": [
+				{
+					"field": "title",
+					"matched_tokens": ["Celular"],
+					"snippet": "<mark>Celular</mark> Oppo Reno 7 128GB, 6GB ram, cámara principal 64 + 2 + 2MP, frontal 32MP, 6.43\", negro"
+				}
+			],
+			"text_match": 578730123365187705,
+			"text_match_info": {
+				"best_field_score": "1108091338752",
+				"best_field_weight": 15,
+				"fields_matched": 1,
+				"score": "578730123365187705",
+				"tokens_matched": 1
+			}
+		},
+		{
+			"document": {
+				"active": true,
+				"bestprice": 359.0,
+				"brand": "SAMSUNG",
+				"categories": {
+					"level1": "Tecnologia",
+					"level2": "Telefonia",
+					"level3": "Smartphones"
+				},
+				"competitors": "Falabella",
+				"entrepreneur": 0,
+				"f.Capacidad": "NO ESPECIFICA",
+				"f.Memoria Ram": "3GB",
+				"f.Tamaño de la pantalla": "NO ESPECIFICA",
+				"filtercategory": "Telefonia",
+				"id": "67ef2c7ea8cfe54c73cbd68c",
+				"images": [
+					"https://media.falabella.com.pe/falabellaPE/141062083_01/public?wid=800&hei=800&qlt=70",
+					"https://media.falabella.com.pe/falabellaPE/141062083_02/public?wid=800&hei=800&qlt=70",
+					"https://media.falabella.com.pe/falabellaPE/141062083_03/public?wid=800&hei=800&qlt=70",
+					"https://media.falabella.com.pe/falabellaPE/141062083_04/public?wid=800&hei=800&qlt=70",
+					"https://media.falabella.com.pe/falabellaPE/141062083_05/public?wid=800&hei=800&qlt=70"
+				],
+				"last_update_date": "2025-05-13T00:00:00",
+				"metrics": {
+					"amt_change": 0.0,
+					"amt_change_text": "No bajó de precio",
+					"isminimum": true,
+					"median_hist": 557.6206896551724,
+					"percent_change": 0.0,
+					"percent_offer": 35.619318533176674,
+					"percent_save": 64.06406406406407,
+					"prev_price": 359.0,
+					"price_minimum": 359.0
+				},
+				"numtiendas": 2,
+				"percent_change": 0,
+				"percent_offer": 36,
+				"repmodel": "GALAXY A04E 3RAM 32GB NEGRO",
+				"spider": "falabellapriority",
+				"stores": ["Falabella"],
+				"tags": ["Tecnologia", "Telefonia", "Smartphones"],
+				"title": "Celular Samsung Galaxy A04E 65 Pulg 3GB RAM 32GB Negro",
+				"topstore": "Falabella",
+				"toptitle": "Celular Samsung Galaxy A04E 65 Pulg 3GB RAM 32GB Negro",
+				"updated": 1747133957,
+				"url": "https://www.falabella.com.pe/falabella-pe/product/141062082/Celular-Samsung-Galaxy-A04E-65-Pulg-3GB-RAM-32GB-Negro",
+				"url_compy": "https://compy.pe/galeria/producto/67ef2c7ea8cfe54c73cbd68c",
+				"urls": [
+					"https://www.falabella.com.pe/falabella-pe/product/141062082/Celular-Samsung-Galaxy-A04E-65-Pulg-3GB-RAM-32GB-Negro",
+					"https://www.falabella.com.pe/falabella-pe/product/119725710/SAMSUNG-GALAXY-A04e-4G-32GB-3GB"
+				]
+			},
+			"highlight": {
+				"title": {
+					"matched_tokens": ["Celular"],
+					"snippet": "<mark>Celular</mark> Samsung Galaxy A04E 65 Pulg 3GB RAM 32GB Negro"
+				}
+			},
+			"highlights": [
+				{
+					"field": "title",
+					"matched_tokens": ["Celular"],
+					"snippet": "<mark>Celular</mark> Samsung Galaxy A04E 65 Pulg 3GB RAM 32GB Negro"
+				}
+			],
+			"text_match": 578730123365187705,
+			"text_match_info": {
+				"best_field_score": "1108091338752",
+				"best_field_weight": 15,
+				"fields_matched": 1,
+				"score": "578730123365187705",
+				"tokens_matched": 1
+			}
+		},
+		{
+			"document": {
+				"active": true,
+				"bestprice": 539.0,
+				"brand": "OPPO",
+				"categories": {
+					"level1": "Tecnologia",
+					"level2": "Telefonia",
+					"level3": "Smartphones"
+				},
+				"competitors": "Falabella|Shopstar|Oechsle|plazaVea|Promart",
+				"entrepreneur": 0,
+				"f.Capacidad": "NO ESPECIFICA",
+				"f.Memoria Ram": "4GB",
+				"f.Tamaño de la pantalla": "NO ESPECIFICA",
+				"filtercategory": "Telefonia",
+				"id": "67bb86b74449b9b6091ce760",
+				"images": [
+					"https://www.falabella.com.pe/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/143177811_01/public?wid=800&hei=800&qlt=70",
+					"https://www.falabella.com.pe/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/143177811_02/public?wid=800&hei=800&qlt=70",
+					"https://www.falabella.com.pe/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/143177811_03/public?wid=800&hei=800&qlt=70",
+					"https://www.falabella.com.pe/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/143177811_04/public?wid=800&hei=800&qlt=70",
+					"https://www.falabella.com.pe/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/143177811_05/public?wid=800&hei=800&qlt=70"
+				],
+				"last_update_date": "2025-05-13T00:00:00",
+				"metrics": {
+					"amt_change": -386.63,
+					"amt_change_text": "Bajó más de S/200",
+					"isminimum": true,
+					"median_hist": 760.6263333333334,
+					"percent_change": -41.76938949688321,
+					"percent_offer": 29.137346897009007,
+					"percent_save": 43.80733944954129,
+					"prev_price": 925.63,
+					"price_minimum": 539.0
+				},
+				"numtiendas": 5,
+				"percent_change": -42,
+				"percent_offer": 29,
+				"repmodel": "OPPO A77 4RAM 128GB NEGRO",
+				"spider": "realplazapriority",
+				"stores": ["Falabella", "Shopstar", "Oechsle", "plazaVea", "Promart"],
+				"tags": ["Tecnologia", "Telefonia", "Smartphones"],
+				"title": "Celular Oppo A77 65 Pulg 4GB RAM 128GB Negro",
+				"topstore": "Falabella",
+				"toptitle": "Celular Oppo A77 65 Pulg 4GB RAM 128GB Negro",
+				"updated": 1747134650,
+				"url": "https://www.falabella.com.pe/falabella-pe/product/143177810/Celular-Oppo-A77-65-Pulg-4GB-RAM-128GB-Negro",
+				"url_compy": "https://compy.pe/galeria/producto/67bb86b74449b9b6091ce760",
+				"urls": [
+					"https://www.falabella.com.pe/falabella-pe/product/143177810/Celular-Oppo-A77-65-Pulg-4GB-RAM-128GB-Negro",
+					"https://shopstar.pe/celular-oppo-a77-6-56--4gb-ram-128gb-negro-1205085/p",
+					"https://www.oechsle.pe/celular-oppo-a77-6-56-4gb-ram-128gb-negro-2332890/p",
+					"https://www.plazavea.com.pe/celular-oppo-a77-6-56--4gb-ram-128gb-negro-100641249/p",
+					"https://www.promart.pe/celular-oppo-a77-6-56--4gb-ram-128gb-negro-1000379957/p"
+				]
+			},
+			"highlight": {
+				"title": {
+					"matched_tokens": ["Celular"],
+					"snippet": "<mark>Celular</mark> Oppo A77 65 Pulg 4GB RAM 128GB Negro"
+				}
+			},
+			"highlights": [
+				{
+					"field": "title",
+					"matched_tokens": ["Celular"],
+					"snippet": "<mark>Celular</mark> Oppo A77 65 Pulg 4GB RAM 128GB Negro"
+				}
+			],
+			"text_match": 578730123365187705,
+			"text_match_info": {
+				"best_field_score": "1108091338752",
+				"best_field_weight": 15,
+				"fields_matched": 1,
+				"score": "578730123365187705",
+				"tokens_matched": 1
+			}
+		},
+		{
+			"document": {
+				"active": true,
+				"bestprice": 0.96,
+				"brand": "WERKEN",
+				"categories": {
+					"level1": "Tecnologia",
+					"level2": "Telefonia",
+					"level3": "Smartphones"
+				},
+				"competitors": "Shopstar",
+				"entrepreneur": 0,
+				"f.Capacidad": "NO ESPECIFICA",
+				"f.Memoria Ram": "NO ESPECIFICA",
+				"f.Tamaño de la pantalla": "NO ESPECIFICA",
+				"filtercategory": "Telefonia",
+				"id": "672c03d6f649426f002b9632",
+				"images": [
+					"https://mercury.vteximg.com.br/arquivos/ids/19290883/image-e7bea97c1c874327be24c66fb1fe33b3.jpg?v=638665092999170000",
+					"https://mercury.vteximg.com.br/arquivos/ids/19290882/image-1fc75ab8a0074e35a019af104b8d7926.jpg?v=638665092998870000",
+					"https://mercury.vteximg.com.br/arquivos/ids/19290884/image-e28d9200445944088ced96fb5fc32c7e.jpg?v=638665092999000000",
+					"https://mercury.vteximg.com.br/arquivos/ids/19290885/image-342308324dd947069edfdcd516eb6507.jpg?v=638665092999000000",
+					"https://mercury.vteximg.com.br/arquivos/ids/19290886/image-5c154da2c0f6465a8e745442569644cf.jpg?v=638665092999330000",
+					"https://mercury.vteximg.com.br/arquivos/ids/19290887/image-1f1f2607f2c346c59364acee006454a6.jpg?v=638665092999500000",
+					"https://mercury.vteximg.com.br/arquivos/ids/19290888/image-d3254a4c0edf4d4fad06c4df0dbfb67b.jpg?v=638665092999500000",
+					"https://mercury.vteximg.com.br/arquivos/ids/19290889/image-b5158b9dff6145ea8dc9fa9fddf5a786.jpg?v=638665092999500000"
+				],
+				"last_update_date": "2025-05-13T00:00:00",
+				"metrics": {
+					"amt_change": 0.0,
+					"amt_change_text": "No bajó de precio",
+					"isminimum": false,
+					"median_hist": 1.2376666666666667,
+					"percent_change": 0.0,
+					"percent_offer": 22.434688930783736,
+					"percent_save": 0.0,
+					"prev_price": 0.96,
+					"price_minimum": 0.9
+				},
+				"numtiendas": 1,
+				"percent_change": 0,
+				"percent_offer": 22,
+				"repmodel": "SMS-SM18B",
+				"spider": "shopstarpriority",
+				"stores": ["Shopstar"],
+				"tags": ["Tecnologia", "Telefonia", "Smartphones"],
+				"title": "Lanyard Sujetador de Celular 80cm Werken",
+				"topstore": "Shopstar",
+				"toptitle": "Lanyard Sujetador de Celular 80cm Werken",
+				"updated": 1747131912,
+				"url": "https://www.shopstar.pe/lanyard-sujetador-de-celular-80cm-werken-1855399/p",
+				"url_compy": "https://compy.pe/galeria/producto/672c03d6f649426f002b9632",
+				"urls": [
+					"https://shopstar.pe/lanyard-sujetador-de-celular-80cm-werken-1855399/p"
+				]
+			},
+			"highlight": {
+				"title": {
+					"matched_tokens": ["Celular"],
+					"snippet": "Lanyard Sujetador de <mark>Celular</mark> 80cm Werken"
+				}
+			},
+			"highlights": [
+				{
+					"field": "title",
+					"matched_tokens": ["Celular"],
+					"snippet": "Lanyard Sujetador de <mark>Celular</mark> 80cm Werken"
+				}
+			],
+			"text_match": 578730123365187705,
+			"text_match_info": {
+				"best_field_score": "1108091338752",
+				"best_field_weight": 15,
+				"fields_matched": 1,
+				"score": "578730123365187705",
+				"tokens_matched": 1
+			}
+		},
+		{
+			"document": {
+				"active": true,
+				"bestprice": 359.0,
+				"brand": "XIAOMI",
+				"categories": {
+					"level1": "Tecnologia",
+					"level2": "Telefonia",
+					"level3": "Smartphones"
+				},
+				"competitors": "Falabella|plazaVea|Promart",
+				"entrepreneur": 0,
+				"f.Capacidad": "NO ESPECIFICA",
+				"f.Memoria Ram": "2GB",
+				"f.Tamaño de la pantalla": "NO ESPECIFICA",
+				"filtercategory": "Telefonia",
+				"id": "654aca2c715610ff6af1f7b3",
+				"images": [
+					"https://media.falabella.com.pe/falabellaPE/131021566_01/public?wid=800&hei=800&qlt=70",
+					"https://media.falabella.com.pe/falabellaPE/131021566_02/public?wid=800&hei=800&qlt=70",
+					"https://media.falabella.com.pe/falabellaPE/131021566_03/public?wid=800&hei=800&qlt=70",
+					"https://media.falabella.com.pe/falabellaPE/131021566_04/public?wid=800&hei=800&qlt=70"
+				],
+				"last_update_date": "2025-05-13T00:00:00",
+				"metrics": {
+					"amt_change": -241.0,
+					"amt_change_text": "Bajó más de S/200",
+					"isminimum": true,
+					"median_hist": 447.3666666666667,
+					"percent_change": -40.166666666666664,
+					"percent_offer": 19.752626480888164,
+					"percent_save": 48.640915593705294,
+					"prev_price": 600.0,
+					"price_minimum": 359.0
+				},
+				"numtiendas": 4,
+				"percent_change": -40,
+				"percent_offer": 20,
+				"repmodel": "REDMI 9A 2RAM 32GB NEGRO",
+				"spider": "falabellapriority",
+				"stores": ["Falabella", "plazaVea", "Promart"],
+				"tags": ["Tecnologia", "Telefonia", "Smartphones"],
+				"title": "Celular Xiaomi Redmi 9A 2GB 32GB",
+				"topstore": "Falabella",
+				"toptitle": "Celular Xiaomi Redmi 9A 2GB 32GB",
+				"updated": 1747135013,
+				"url": "https://www.falabella.com.pe/falabella-pe/product/131021565/Celular-Xiaomi-Redmi-9A-2GB-32GB",
+				"url_compy": "https://compy.pe/galeria/producto/654aca2c715610ff6af1f7b3",
+				"urls": [
+					"https://www.falabella.com.pe/falabella-pe/product/131021565/Celular-Xiaomi-Redmi-9A-2GB-32GB",
+					"https://www.plazavea.com.pe/smartphone-xiaomi-redmi-9a-32gb-2gb-ram-negro-100531554/p",
+					"https://www.promart.pe/smartphone-xiaomi-redmi-9a-32gb-2gb-ram-negro-100020754/p",
+					"https://www.falabella.com.pe/falabella-pe/product/119778334/REDMI-9A-4G-32GB-2GB-BLACK"
+				]
+			},
+			"highlight": {
+				"title": {
+					"matched_tokens": ["Celular"],
+					"snippet": "<mark>Celular</mark> Xiaomi Redmi 9A 2GB 32GB"
+				}
+			},
+			"highlights": [
+				{
+					"field": "title",
+					"matched_tokens": ["Celular"],
+					"snippet": "<mark>Celular</mark> Xiaomi Redmi 9A 2GB 32GB"
+				}
+			],
+			"text_match": 578730123365187705,
+			"text_match_info": {
+				"best_field_score": "1108091338752",
+				"best_field_weight": 15,
+				"fields_matched": 1,
+				"score": "578730123365187705",
+				"tokens_matched": 1
+			}
+		},
+		{
+			"document": {
+				"active": true,
+				"bestprice": 329.0,
+				"brand": "XIAOMI",
+				"categories": {
+					"level1": "Tecnologia",
+					"level2": "Telefonia",
+					"level3": "Smartphones"
+				},
+				"competitors": "Falabella|plazaVea|Promart",
+				"entrepreneur": 0,
+				"f.Capacidad": "NO ESPECIFICA",
+				"f.Memoria Ram": "2GB",
+				"f.Tamaño de la pantalla": "NO ESPECIFICA",
+				"filtercategory": "Telefonia",
+				"id": "651445f8f0ffaae7a3f89eb3",
+				"images": [
+					"https://promart.vteximg.com.br/arquivos/ids/927602/image-5f25cf27effe471893c5ddf57ec943c6.jpg?v=637566003704830000"
+				],
+				"last_update_date": "2025-05-13T00:00:00",
+				"metrics": {
+					"amt_change": -271.0,
+					"amt_change_text": "Bajó más de S/200",
+					"isminimum": true,
+					"median_hist": 410.3,
+					"percent_change": -45.166666666666664,
+					"percent_offer": 19.814769680721426,
+					"percent_save": 52.93276108726752,
+					"prev_price": 600.0,
+					"price_minimum": 329.0
+				},
+				"numtiendas": 4,
+				"percent_change": -45,
+				"percent_offer": 20,
+				"repmodel": "REDMI 9A 2RAM 32GB VERDE",
+				"spider": "promartpriority",
+				"stores": ["Falabella", "plazaVea", "Promart"],
+				"tags": ["Tecnologia", "Telefonia", "Smartphones"],
+				"title": "CELULAR XIAOMI REDMI 9A DE 32GB Y 2 GB AURORA GREEN",
+				"topstore": "Falabella",
+				"toptitle": "CELULAR XIAOMI REDMI 9A DE 32GB Y 2 GB AURORA GREEN",
+				"updated": 1747133359,
+				"url": "https://www.falabella.com.pe/falabella-pe/product/122820678/CELULAR-XIAOMI-REDMI-9A-DE-32GB-Y-2-GB-AURORA-GREEN",
+				"url_compy": "https://compy.pe/galeria/producto/651445f8f0ffaae7a3f89eb3",
+				"urls": [
+					"https://www.falabella.com.pe/falabella-pe/product/122820678/CELULAR-XIAOMI-REDMI-9A-DE-32GB-Y-2-GB-AURORA-GREEN",
+					"https://www.plazavea.com.pe/smartphone-xiaomi-redmi-9a-32gb-2gb-ram-verde-100531557/p",
+					"https://www.promart.pe/smartphone-xiaomi-redmi-9a-32gb-2gb-ram-verde-100020760/p",
+					"https://www.falabella.com.pe/falabella-pe/product/119778393/REDMI-9A-4G-32GB-2GB-VERDE"
+				]
+			},
+			"highlight": {
+				"title": {
+					"matched_tokens": ["CELULAR"],
+					"snippet": "<mark>CELULAR</mark> XIAOMI REDMI 9A DE 32GB Y 2 GB AURORA GREEN"
+				}
+			},
+			"highlights": [
+				{
+					"field": "title",
+					"matched_tokens": ["CELULAR"],
+					"snippet": "<mark>CELULAR</mark> XIAOMI REDMI 9A DE 32GB Y 2 GB AURORA GREEN"
+				}
+			],
+			"text_match": 578730123365187705,
+			"text_match_info": {
+				"best_field_score": "1108091338752",
+				"best_field_weight": 15,
+				"fields_matched": 1,
+				"score": "578730123365187705",
+				"tokens_matched": 1
+			}
+		},
+		{
+			"document": {
+				"active": true,
+				"bestprice": 503.0,
+				"brand": "HUAWEI",
+				"categories": {
+					"level1": "Tecnologia",
+					"level2": "Telefonia",
+					"level3": "Smartphones"
+				},
+				"competitors": "Falabella",
+				"entrepreneur": 0,
+				"f.Capacidad": "NO ESPECIFICA",
+				"f.Memoria Ram": "4GB",
+				"f.Tamaño de la pantalla": "NO ESPECIFICA",
+				"filtercategory": "Telefonia",
+				"id": "66917f4fe31deadfca62ffc8",
+				"images": [
+					"https://www.falabella.com.pe/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/143549036_01/public?wid=800&hei=800&qlt=70",
+					"https://www.falabella.com.pe/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/143549036_02/public?wid=800&hei=800&qlt=70",
+					"https://www.falabella.com.pe/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/143549036_03/public?wid=800&hei=800&qlt=70",
+					"https://www.falabella.com.pe/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/143549036_04/public?wid=800&hei=800&qlt=70",
+					"https://www.falabella.com.pe/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/143549036_05/public?wid=800&hei=800&qlt=70"
+				],
+				"last_update_date": "2025-05-13T00:00:00",
+				"metrics": {
+					"amt_change": 0.0,
+					"amt_change_text": "No bajó de precio",
+					"isminimum": false,
+					"median_hist": 600.4545454545455,
+					"percent_change": 0.0,
+					"percent_offer": 16.230128690386078,
+					"percent_save": 0.0,
+					"prev_price": 503.0,
+					"price_minimum": 478.0
+				},
+				"numtiendas": 3,
+				"percent_change": 0,
+				"percent_offer": 16,
+				"repmodel": "NOVA Y70",
+				"spider": "falabellapriority",
+				"stores": ["Falabella"],
+				"tags": ["Tecnologia", "Telefonia", "Smartphones"],
+				"title": "Celular HUAWEI NOVA Y70 - 4GB RAM + 128GB - Color Azul",
+				"topstore": "Falabella",
+				"toptitle": "Celular HUAWEI NOVA Y70 - 4GB RAM + 128GB - Color Azul",
+				"updated": 1747137031,
+				"url": "https://www.falabella.com.pe/falabella-pe/product/143548885/Celular-HUAWEI-NOVA-Y70-4GB-RAM-+-128GB-Color-Azul",
+				"url_compy": "https://compy.pe/galeria/producto/66917f4fe31deadfca62ffc8",
+				"urls": [
+					"https://www.falabella.com.pe/falabella-pe/product/143548885/Celular-HUAWEI-NOVA-Y70-4GB-RAM-+-128GB-Color-Azul",
+					"https://www.falabella.com.pe/falabella-pe/product/143548463/Celular-HUAWEI-NOVA-Y70-4GB-RAM-+-128GB-Color-Negro",
+					"https://www.falabella.com.pe/falabella-pe/product/143549035/Celular-HUAWEI-NOVA-Y70-4GB-RAM-+-128GB-Color-Blanco"
+				]
+			},
+			"highlight": {
+				"title": {
+					"matched_tokens": ["Celular"],
+					"snippet": "<mark>Celular</mark> HUAWEI NOVA Y70 - 4GB RAM + 128GB - Color Azul"
+				}
+			},
+			"highlights": [
+				{
+					"field": "title",
+					"matched_tokens": ["Celular"],
+					"snippet": "<mark>Celular</mark> HUAWEI NOVA Y70 - 4GB RAM + 128GB - Color Azul"
+				}
+			],
+			"text_match": 578730123365187705,
+			"text_match_info": {
+				"best_field_score": "1108091338752",
+				"best_field_weight": 15,
+				"fields_matched": 1,
+				"score": "578730123365187705",
+				"tokens_matched": 1
+			}
+		},
+		{
+			"document": {
+				"active": true,
+				"bestprice": 388.0,
+				"brand": "SAMSUNG",
+				"categories": {
+					"level1": "Tecnologia",
+					"level2": "Telefonia",
+					"level3": "Smartphones"
+				},
+				"competitors": "Falabella|plazaVea|Promart",
+				"entrepreneur": 0,
+				"f.Capacidad": "NO ESPECIFICA",
+				"f.Memoria Ram": "4GB",
+				"f.Tamaño de la pantalla": "NO ESPECIFICA",
+				"filtercategory": "Telefonia",
+				"id": "652479f5f0ffaae7a3ec4e3c",
+				"images": [
+					"https://promart.vteximg.com.br/arquivos/ids/7039261/image-d9a07a545a64490f9d4e4171f9a75d65.jpg?v=638201454060770000"
+				],
+				"last_update_date": "2025-05-13T00:00:00",
+				"metrics": {
+					"amt_change": 0.0,
+					"amt_change_text": "No bajó de precio",
+					"isminimum": false,
+					"median_hist": 462.2006666666667,
+					"percent_change": 0.0,
+					"percent_offer": 16.053777507893397,
+					"percent_save": 56.35545556805399,
+					"prev_price": 388.0,
+					"price_minimum": 284.5
+				},
+				"numtiendas": 4,
+				"percent_change": 0,
+				"percent_offer": 16,
+				"repmodel": "GALAXY A04 4RAM 64GB NEGRO",
+				"spider": "realplazapriority",
+				"stores": ["Falabella", "plazaVea", "Promart"],
+				"tags": ["Tecnologia", "Telefonia", "Smartphones"],
+				"title": "Celular Samsung Galaxy A04 4GB RAM 64GB Negro",
+				"topstore": "Falabella",
+				"toptitle": "Celular Samsung Galaxy A04 4GB RAM 64GB Negro",
+				"updated": 1747134650,
+				"url": "https://www.falabella.com.pe/falabella-pe/product/141435694/Celular-Samsung-Galaxy-A04-4GB-RAM-64GB-Negro",
+				"url_compy": "https://compy.pe/galeria/producto/652479f5f0ffaae7a3ec4e3c",
+				"urls": [
+					"https://www.falabella.com.pe/falabella-pe/product/141435694/Celular-Samsung-Galaxy-A04-4GB-RAM-64GB-Negro",
+					"https://www.falabella.com.pe/falabella-pe/product/141451497/Celular-Samsung-Galaxy-A04-4GB-RAM-64GB-Negro",
+					"https://www.plazavea.com.pe/celular-samsung-galaxy-a04-64gb-100688210/p",
+					"https://www.promart.pe/celular-samsung-galaxy-a04-64gb-1000396202/p"
+				]
+			},
+			"highlight": {
+				"title": {
+					"matched_tokens": ["Celular"],
+					"snippet": "<mark>Celular</mark> Samsung Galaxy A04 4GB RAM 64GB Negro"
+				}
+			},
+			"highlights": [
+				{
+					"field": "title",
+					"matched_tokens": ["Celular"],
+					"snippet": "<mark>Celular</mark> Samsung Galaxy A04 4GB RAM 64GB Negro"
+				}
+			],
+			"text_match": 578730123365187705,
+			"text_match_info": {
+				"best_field_score": "1108091338752",
+				"best_field_weight": 15,
+				"fields_matched": 1,
+				"score": "578730123365187705",
+				"tokens_matched": 1
+			}
+		}
+	],
+	"out_of": 94280,
+	"page": 1,
+	"request_params": {
+		"collection_name": "products2",
+		"per_page": 10,
+		"q": "celular"
+	},
+	"search_cutoff": false,
+	"search_time_ms": 8
+}

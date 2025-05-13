@@ -1,4 +1,3 @@
-import { vectorIndex } from "@/lib/vector";
 import { openai } from "@ai-sdk/openai";
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
@@ -148,13 +147,7 @@ export async function POST(req: Request) {
 				parameters: z.object({
 					query: z
 						.string()
-						.describe("The search query to find relevant products"),
-					category: z
-						.string()
-						.optional()
-						.describe(
-							"Optional category to filter by (e.g., Electrohogar, Tecnologia)",
-						),
+						.describe("The search query to find relevant products. Must be in Spanish and singular. A product like 'celular', 'laptop'"),
 					brand: z
 						.string()
 						.optional()
@@ -166,107 +159,42 @@ export async function POST(req: Request) {
 						.optional()
 						.describe("Maximum price to filter by"),
 				}),
-				execute: async ({ query, category, brand, priceMax }) => {
-					// Prepare filter based on optional parameters
-					const filter = [];
+				execute: async ({ query, brand, priceMax }) => {
 
-					if (category) {
-						filter.push(`category_level1 = '${category}'`);
-					}
+					const myHeaders = new Headers();
+					myHeaders.append("X-TYPESENSE-API-KEY", process.env.TYPESENSE_API_KEY || "");
 
+					const requestOptions: RequestInit = {
+						method: "GET",
+						headers: myHeaders,
+						redirect: "follow"
+					};
+
+					const queryByItems = []
 					if (brand) {
-						filter.push(`brand = '${brand}'`);
+						queryByItems.push(`brand:${brand}`);
 					}
 
-					if (priceMax && priceMax > 0) {
-						filter.push(`price <= ${priceMax}`);
+					if (priceMax) {
+						queryByItems.push(`bestprice:<${priceMax}`);
 					}
 
-					// Convert array to filter string if any filters exist
-					const filterString =
-						filter.length > 0 ? filter.join(" AND ") : undefined;
-
-					console.log(`Searching for: ${query} with filter: ${filterString}`);
-
-					// Query the vector database using our typed helper function
-					const results = await vectorIndex.query({
-						data: query,
-						topK: 5,
-						filter: filterString,
-						includeMetadata: true,
+					const searchParams = new URLSearchParams({
+						q: query,
+						query_by: "title,repmodel",
+						sort_by: "top:desc,percent_offer:desc",
+						per_page: "10"
 					});
 
-					if (results.length === 0) {
-						return {
-							products: [],
-							query,
-							total: 0,
-						};
+					if (queryByItems.length > 0) {
+						searchParams.set("filter_by", queryByItems.join("&&"));
 					}
 
-					// Format the product data and prepare markdown tables for features
-					return {
-						products: results.map((match) => {
-							// Extract any features or specifications to format as markdown
-							const features = [];
-							const specs = [];
+					const response = await fetch(`http://typesense-app-autoscaling-lb-290518720.us-west-2.elb.amazonaws.com/collections/products2/documents/search?${searchParams.toString()}`, requestOptions)
 
-							// Add any markdown formatted specifications table
-							if (match.metadata?.specifications) {
-								specs.push(
-									formatSpecsAsMarkdown(match.metadata.specifications),
-								);
-							}
+					const data = await response.json();
 
-							// Add any markdown formatted features
-							if (match.metadata?.features) {
-								features.push(
-									formatFeaturesAsMarkdown(match.metadata.features),
-								);
-							}
-
-							return {
-								id: match.id,
-								title: match.metadata?.title,
-								brand: match.metadata?.brand,
-								model: match.metadata?.model,
-								price: match.metadata?.price,
-								category: `${match.metadata?.category_level1} > ${match.metadata?.category_level2} > ${match.metadata?.category_level3}`,
-								product_url: match.metadata?.product_url,
-								image_url: match.metadata?.image_url,
-								// Include additional metadata that might be useful
-								color: match.metadata?.color,
-								capacity: match.metadata?.capacity,
-								memory: match.metadata?.memory,
-								screen_size: match.metadata?.screen_size,
-								weight: match.metadata?.weight,
-								power: match.metadata?.power,
-								resolution: match.metadata?.resolution,
-								// Price history information
-								price_history: match.metadata?.price_history,
-								previous_price: match.metadata?.price_history
-									? (match.metadata?.price_history as PriceHistory).previous
-									: undefined,
-								lowest_price: match.metadata?.price_history
-									? (match.metadata?.price_history as PriceHistory).minimum
-									: undefined,
-
-								// Store information and description
-								description: match.metadata?.description,
-								store_count: match.metadata?.stores
-									? (match.metadata?.stores as StoreInfo[]).length
-									: 0,
-								stores: match.metadata?.stores,
-								// Add markdown formatted content
-								features_markdown: features.join("\n\n"),
-								specifications_markdown: specs.join("\n\n"),
-								// Explicitly add a View Product link for markdown rendering
-								view_product_link: `[View on Compy](https://www.compy.pe/galeria/producto/${match.id})`,
-							};
-						}),
-						query,
-						total: results.length,
-					};
+					return data;
 				},
 			}),
 		},
