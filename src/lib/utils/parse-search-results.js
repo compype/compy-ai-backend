@@ -30,6 +30,7 @@ export function compressProductData(data) {
       image: firstImage,
       stores: storesList,
       url: doc.url_compy || doc.url,
+      compy_url: doc.url_compy,
     };
   });
 
@@ -50,15 +51,15 @@ export function compressProductData(data) {
 function formatAsMarkdown(products, summary) {
   let output = '## Product Search Results\n';
   output += `*Query: "${summary.search_query}" - Found: ${summary.total_found} (Page ${summary.page})*\n\n`;
-  output += '| Title | Brand | Model | Price | Features | Image | Stores |\n';
-  output += '|-------|-------|-------|-------|----------|-------|--------|\n';
+  output += '| Title | Brand | Model | Price | Features | Image | Stores | Compy URL |\n';
+  output += '|-------|-------|-------|-------|----------|-------|--------|-----------|\n';
 
   for (const product of products) {
 
     // Format image as markdown link if available
     const imageCell = product.image ? `![Image](${product.image})` : '';
 
-    output += `| ${product.title} | ${product.brand} | ${product.model} | ${product.price} | ${product.features} | ${imageCell} | ${product.stores} |\n`;
+    output += `| ${product.title} | ${product.brand} | ${product.model} | ${product.price} | ${product.features} | ${imageCell} | ${product.stores} | [Compy URL](${product.compy_url}) |\n`;
   }
 
   return output;

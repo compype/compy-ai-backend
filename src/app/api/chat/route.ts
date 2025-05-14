@@ -128,6 +128,7 @@ export async function POST(req: Request) {
     - Highlight the best value options based on price-to-performance ratio
     - Always include historical price trends in comparison tables when available
     - Add a "Price Recommendation" column showing buy/wait recommendation based on historicral data
+		- Always include the stores where the product is available
 		
 		ALWAYS RESPOND IN THE SAME LANGUAGE AS THE USER'S QUERY. AS MOST USERS ARE FROM PERU, RESPOND IN SPANISH.`,
 		tools: {
