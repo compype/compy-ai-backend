@@ -1,3 +1,4 @@
+import { compressProductData } from "@/lib/utils/parse-search-results";
 import { openai } from "@ai-sdk/openai";
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
@@ -14,7 +15,7 @@ const ratelimit = new Ratelimit({
 });
 
 // Allow streaming responses up to 30 seconds
-export const maxDuration = 30;
+export const maxDuration = 300;
 
 export async function POST(req: Request) {
 	// Get user information for rate limiting
@@ -188,9 +189,12 @@ export async function POST(req: Request) {
 
 					const data = await response.json();
 
-					return data;
+					return compressProductData(data);
 				},
 			}),
+		},
+		onError: (error) => {
+			console.error(error);
 		},
 	});
 

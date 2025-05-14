@@ -8,11 +8,10 @@ const requestOptions: RequestInit = {
 };
 
 const searchParams = new URLSearchParams({
-  q: "celular",
-  filter_by: "brand:SAMSUNG",
+  q: "macbook",
   query_by: "title,repmodel",
   sort_by: "top:desc,percent_offer:desc",
-  per_page: "250"
+  per_page: "5"
 });
 
 fetch(`http://typesense-app-autoscaling-lb-290518720.us-west-2.elb.amazonaws.com/collections/products2/documents/search?${searchParams.toString()}`, requestOptions)
