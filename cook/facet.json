@@ -1,0 +1,833 @@
+{
+  "facet_counts": [
+    {
+      "counts": [
+        {
+          "count": 5260,
+          "highlighted": "Zapatillas hombre",
+          "value": "Zapatillas hombre"
+        },
+        {
+          "count": 5230,
+          "highlighted": "Audifonos",
+          "value": "Audifonos"
+        },
+        {
+          "count": 4458,
+          "highlighted": "Zapatillas mujer",
+          "value": "Zapatillas mujer"
+        },
+        {
+          "count": 4414,
+          "highlighted": "Camaras de seguridad",
+          "value": "Camaras de seguridad"
+        },
+        {
+          "count": 3570,
+          "highlighted": "Equipos de sonido",
+          "value": "Equipos de sonido"
+        },
+        {
+          "count": 3439,
+          "highlighted": "Juegos de dormitorio",
+          "value": "Juegos de dormitorio"
+        },
+        {
+          "count": 2832,
+          "highlighted": "Parlantes",
+          "value": "Parlantes"
+        },
+        {
+          "count": 2692,
+          "highlighted": "Sillones",
+          "value": "Sillones"
+        },
+        {
+          "count": 2446,
+          "highlighted": "Camas",
+          "value": "Camas"
+        },
+        {
+          "count": 2302,
+          "highlighted": "Laptops",
+          "value": "Laptops"
+        },
+        {
+          "count": 2194,
+          "highlighted": "Drones y Accesorios",
+          "value": "Drones y Accesorios"
+        },
+        {
+          "count": 2125,
+          "highlighted": "Cabeceras",
+          "value": "Cabeceras"
+        },
+        {
+          "count": 1928,
+          "highlighted": "Escritorios",
+          "value": "Escritorios"
+        },
+        {
+          "count": 1878,
+          "highlighted": "Microfonos gamer",
+          "value": "Microfonos gamer"
+        },
+        {
+          "count": 1843,
+          "highlighted": "Suplementos",
+          "value": "Suplementos"
+        },
+        {
+          "count": 1782,
+          "highlighted": "Alimento para perros",
+          "value": "Alimento para perros"
+        },
+        {
+          "count": 1729,
+          "highlighted": "Mesa de sala",
+          "value": "Mesa de sala"
+        },
+        {
+          "count": 1667,
+          "highlighted": "Smartphones",
+          "value": "Smartphones"
+        },
+        {
+          "count": 1529,
+          "highlighted": "Mesa de noche",
+          "value": "Mesa de noche"
+        },
+        {
+          "count": 1510,
+          "highlighted": "Modems, routers y repetidores",
+          "value": "Modems, routers y repetidores"
+        },
+        {
+          "count": 1389,
+          "highlighted": "Sandalias mujer",
+          "value": "Sandalias mujer"
+        },
+        {
+          "count": 1334,
+          "highlighted": "Teclados",
+          "value": "Teclados"
+        },
+        {
+          "count": 1301,
+          "highlighted": "Camaras digitales",
+          "value": "Camaras digitales"
+        },
+        {
+          "count": 1273,
+          "highlighted": "Mouses",
+          "value": "Mouses"
+        },
+        {
+          "count": 1221,
+          "highlighted": "Impresoras",
+          "value": "Impresoras"
+        },
+        {
+          "count": 1190,
+          "highlighted": "Cuidado para perros",
+          "value": "Cuidado para perros"
+        },
+        {
+          "count": 1062,
+          "highlighted": "Accesorios Consolas",
+          "value": "Accesorios Consolas"
+        },
+        {
+          "count": 1061,
+          "highlighted": "Alimento para gatos",
+          "value": "Alimento para gatos"
+        },
+        {
+          "count": 997,
+          "highlighted": "Zapatillas niños",
+          "value": "Zapatillas niños"
+        },
+        {
+          "count": 970,
+          "highlighted": "Vitaminas",
+          "value": "Vitaminas"
+        },
+        {
+          "count": 950,
+          "highlighted": "Muebles sala",
+          "value": "Muebles sala"
+        },
+        {
+          "count": 933,
+          "highlighted": "Perfumes mujer",
+          "value": "Perfumes mujer"
+        },
+        {
+          "count": 901,
+          "highlighted": "Limpieza e Hidratacion",
+          "value": "Limpieza e Hidratacion"
+        },
+        {
+          "count": 882,
+          "highlighted": "Zapatillas niñas",
+          "value": "Zapatillas niñas"
+        },
+        {
+          "count": 868,
+          "highlighted": "Monitores",
+          "value": "Monitores"
+        },
+        {
+          "count": 851,
+          "highlighted": "Colchones",
+          "value": "Colchones"
+        },
+        {
+          "count": 840,
+          "highlighted": "Otros muebles para sala",
+          "value": "Otros muebles para sala"
+        },
+        {
+          "count": 822,
+          "highlighted": "Tintas y toners",
+          "value": "Tintas y toners"
+        },
+        {
+          "count": 804,
+          "highlighted": "Comodas",
+          "value": "Comodas"
+        },
+        {
+          "count": 783,
+          "highlighted": "Licuadoras",
+          "value": "Licuadoras"
+        },
+        {
+          "count": 750,
+          "highlighted": "Tablets",
+          "value": "Tablets"
+        },
+        {
+          "count": 723,
+          "highlighted": "Perfumes hombre",
+          "value": "Perfumes hombre"
+        },
+        {
+          "count": 718,
+          "highlighted": "Bloqueadores y fotoprotectores",
+          "value": "Bloqueadores y fotoprotectores"
+        },
+        {
+          "count": 602,
+          "highlighted": "Plancha de cabello",
+          "value": "Plancha de cabello"
+        },
+        {
+          "count": 592,
+          "highlighted": "Ventiladores",
+          "value": "Ventiladores"
+        },
+        {
+          "count": 578,
+          "highlighted": "Sillas y puffs",
+          "value": "Sillas y puffs"
+        },
+        {
+          "count": 545,
+          "highlighted": "Almacenamiento",
+          "value": "Almacenamiento"
+        },
+        {
+          "count": 543,
+          "highlighted": "Serums",
+          "value": "Serums"
+        },
+        {
+          "count": 513,
+          "highlighted": "Smartwatches y wearables",
+          "value": "Smartwatches y wearables"
+        },
+        {
+          "count": 460,
+          "highlighted": "Microfonos",
+          "value": "Microfonos"
+        },
+        {
+          "count": 437,
+          "highlighted": "Cocinas",
+          "value": "Cocinas"
+        },
+        {
+          "count": 418,
+          "highlighted": "Refrigeradoras",
+          "value": "Refrigeradoras"
+        },
+        {
+          "count": 410,
+          "highlighted": "Cortadoras de cabello",
+          "value": "Cortadoras de cabello"
+        },
+        {
+          "count": 401,
+          "highlighted": "Taladros",
+          "value": "Taladros"
+        },
+        {
+          "count": 359,
+          "highlighted": "Hervidores",
+          "value": "Hervidores"
+        },
+        {
+          "count": 332,
+          "highlighted": "Batidoras",
+          "value": "Batidoras"
+        },
+        {
+          "count": 328,
+          "highlighted": "Aspiradoras",
+          "value": "Aspiradoras"
+        },
+        {
+          "count": 327,
+          "highlighted": "Secadora de cabello",
+          "value": "Secadora de cabello"
+        },
+        {
+          "count": 320,
+          "highlighted": "LED",
+          "value": "LED"
+        },
+        {
+          "count": 318,
+          "highlighted": "Botas y botines mujer",
+          "value": "Botas y botines mujer"
+        },
+        {
+          "count": 312,
+          "highlighted": "Cuidado para gatos",
+          "value": "Cuidado para gatos"
+        },
+        {
+          "count": 311,
+          "highlighted": "Cafeteras",
+          "value": "Cafeteras"
+        },
+        {
+          "count": 296,
+          "highlighted": "Panales bebe",
+          "value": "Panales bebe"
+        },
+        {
+          "count": 295,
+          "highlighted": "Ollas arroceras",
+          "value": "Ollas arroceras"
+        },
+        {
+          "count": 270,
+          "highlighted": "Memorias RAM",
+          "value": "Memorias RAM"
+        },
+        {
+          "count": 270,
+          "highlighted": "Termas electricas",
+          "value": "Termas electricas"
+        },
+        {
+          "count": 251,
+          "highlighted": "Otras Herramientas Electricas",
+          "value": "Otras Herramientas Electricas"
+        },
+        {
+          "count": 235,
+          "highlighted": "Congeladoras",
+          "value": "Congeladoras"
+        },
+        {
+          "count": 219,
+          "highlighted": "Freidoras de aire",
+          "value": "Freidoras de aire"
+        },
+        {
+          "count": 212,
+          "highlighted": "Amoladoras y Esmeriles",
+          "value": "Amoladoras y Esmeriles"
+        },
+        {
+          "count": 211,
+          "highlighted": "Placas madre",
+          "value": "Placas madre"
+        },
+        {
+          "count": 204,
+          "highlighted": "Planchas y vaporizadores de ropa",
+          "value": "Planchas y vaporizadores de ropa"
+        },
+        {
+          "count": 194,
+          "highlighted": "Aire acondicionado",
+          "value": "Aire acondicionado"
+        },
+        {
+          "count": 187,
+          "highlighted": "Campana extractora",
+          "value": "Campana extractora"
+        },
+        {
+          "count": 171,
+          "highlighted": "Encimera y cocina empotrable",
+          "value": "Encimera y cocina empotrable"
+        },
+        {
+          "count": 167,
+          "highlighted": "bicicletas urbanas",
+          "value": "bicicletas urbanas"
+        },
+        {
+          "count": 165,
+          "highlighted": "Extractores",
+          "value": "Extractores"
+        },
+        {
+          "count": 161,
+          "highlighted": "Procesadores",
+          "value": "Procesadores"
+        },
+        {
+          "count": 161,
+          "highlighted": "Arena para gatos",
+          "value": "Arena para gatos"
+        },
+        {
+          "count": 159,
+          "highlighted": "Afeitadoras",
+          "value": "Afeitadoras"
+        },
+        {
+          "count": 156,
+          "highlighted": "Playstation",
+          "value": "Playstation"
+        },
+        {
+          "count": 150,
+          "highlighted": "Lavadoras",
+          "value": "Lavadoras"
+        },
+        {
+          "count": 146,
+          "highlighted": "Tostadoras",
+          "value": "Tostadoras"
+        },
+        {
+          "count": 144,
+          "highlighted": "Zapatos mujer",
+          "value": "Zapatos mujer"
+        },
+        {
+          "count": 141,
+          "highlighted": "Laptops gamer",
+          "value": "Laptops gamer"
+        },
+        {
+          "count": 132,
+          "highlighted": "Rotomartillos y Demoledores",
+          "value": "Rotomartillos y Demoledores"
+        },
+        {
+          "count": 128,
+          "highlighted": "Barras de sonido y Home theater",
+          "value": "Barras de sonido y Home theater"
+        },
+        {
+          "count": 126,
+          "highlighted": "Microondas",
+          "value": "Microondas"
+        },
+        {
+          "count": 124,
+          "highlighted": "bicicletas montaneras",
+          "value": "bicicletas montaneras"
+        },
+        {
+          "count": 122,
+          "highlighted": "Camaras Profesionales",
+          "value": "Camaras Profesionales"
+        },
+        {
+          "count": 115,
+          "highlighted": "Lijadoras",
+          "value": "Lijadoras"
+        },
+        {
+          "count": 112,
+          "highlighted": "Sandalias hombre",
+          "value": "Sandalias hombre"
+        },
+        {
+          "count": 110,
+          "highlighted": "Ropa de cama",
+          "value": "Ropa de cama"
+        },
+        {
+          "count": 106,
+          "highlighted": "Tarimas",
+          "value": "Tarimas"
+        },
+        {
+          "count": 106,
+          "highlighted": "Compresoras de Aire",
+          "value": "Compresoras de Aire"
+        },
+        {
+          "count": 99,
+          "highlighted": "Autoradios",
+          "value": "Autoradios"
+        },
+        {
+          "count": 90,
+          "highlighted": "Panales adulto",
+          "value": "Panales adulto"
+        },
+        {
+          "count": 90,
+          "highlighted": "Horno empotrable",
+          "value": "Horno empotrable"
+        },
+        {
+          "count": 89,
+          "highlighted": "Cases",
+          "value": "Cases"
+        },
+        {
+          "count": 88,
+          "highlighted": "Atornilladores",
+          "value": "Atornilladores"
+        },
+        {
+          "count": 87,
+          "highlighted": "Sierras Circulares",
+          "value": "Sierras Circulares"
+        },
+        {
+          "count": 86,
+          "highlighted": "Camaras web",
+          "value": "Camaras web"
+        },
+        {
+          "count": 84,
+          "highlighted": "Nintendo",
+          "value": "Nintendo"
+        },
+        {
+          "count": 84,
+          "highlighted": "Frigobares",
+          "value": "Frigobares"
+        },
+        {
+          "count": 84,
+          "highlighted": "Estufas y calefactores",
+          "value": "Estufas y calefactores"
+        },
+        {
+          "count": 77,
+          "highlighted": "Horno electrico",
+          "value": "Horno electrico"
+        },
+        {
+          "count": 76,
+          "highlighted": "Camaras deportivas",
+          "value": "Camaras deportivas"
+        },
+        {
+          "count": 70,
+          "highlighted": "Bluray y DVD",
+          "value": "Bluray y DVD"
+        },
+        {
+          "count": 69,
+          "highlighted": "Fuentes y estabilizadores",
+          "value": "Fuentes y estabilizadores"
+        },
+        {
+          "count": 68,
+          "highlighted": "Rizadores",
+          "value": "Rizadores"
+        },
+        {
+          "count": 67,
+          "highlighted": "Depiladoras",
+          "value": "Depiladoras"
+        },
+        {
+          "count": 65,
+          "highlighted": "QLED",
+          "value": "QLED"
+        },
+        {
+          "count": 65,
+          "highlighted": "Generadores Electricos",
+          "value": "Generadores Electricos"
+        },
+        {
+          "count": 62,
+          "highlighted": "Botas y botines niñas",
+          "value": "Botas y botines niñas"
+        },
+        {
+          "count": 58,
+          "highlighted": "Pistolas de Calor",
+          "value": "Pistolas de Calor"
+        },
+        {
+          "count": 57,
+          "highlighted": "Almohadas",
+          "value": "Almohadas"
+        },
+        {
+          "count": 53,
+          "highlighted": "scooters electricos",
+          "value": "scooters electricos"
+        },
+        {
+          "count": 53,
+          "highlighted": "bicicletas estaticas",
+          "value": "bicicletas estaticas"
+        },
+        {
+          "count": 53,
+          "highlighted": "Cautines y Accesorios",
+          "value": "Cautines y Accesorios"
+        },
+        {
+          "count": 53,
+          "highlighted": "Ruteadoras y Fresadoras",
+          "value": "Ruteadoras y Fresadoras"
+        },
+        {
+          "count": 49,
+          "highlighted": "Sopladoras e Infladores",
+          "value": "Sopladoras e Infladores"
+        },
+        {
+          "count": 48,
+          "highlighted": "Sierras Caladoras",
+          "value": "Sierras Caladoras"
+        },
+        {
+          "count": 42,
+          "highlighted": "Parlantes inteligentes",
+          "value": "Parlantes inteligentes"
+        },
+        {
+          "count": 39,
+          "highlighted": "Dremel y Accesorios",
+          "value": "Dremel y Accesorios"
+        },
+        {
+          "count": 37,
+          "highlighted": "Tarjetas graficas",
+          "value": "Tarjetas graficas"
+        },
+        {
+          "count": 36,
+          "highlighted": "All in one y desktops",
+          "value": "All in one y desktops"
+        },
+        {
+          "count": 35,
+          "highlighted": "Armarios",
+          "value": "Armarios"
+        },
+        {
+          "count": 34,
+          "highlighted": "Otros accesorios",
+          "value": "Otros accesorios"
+        },
+        {
+          "count": 34,
+          "highlighted": "Tronzadoras y Esmeriles de Banco",
+          "value": "Tronzadoras y Esmeriles de Banco"
+        },
+        {
+          "count": 31,
+          "highlighted": "Pulidoras",
+          "value": "Pulidoras"
+        },
+        {
+          "count": 31,
+          "highlighted": "Lavasecas",
+          "value": "Lavasecas"
+        },
+        {
+          "count": 30,
+          "highlighted": "Drones",
+          "value": "Drones"
+        },
+        {
+          "count": 30,
+          "highlighted": "Secadoras",
+          "value": "Secadoras"
+        },
+        {
+          "count": 30,
+          "highlighted": "Ingletadoras",
+          "value": "Ingletadoras"
+        },
+        {
+          "count": 29,
+          "highlighted": "Xbox",
+          "value": "Xbox"
+        },
+        {
+          "count": 29,
+          "highlighted": "Botas y botines hombre",
+          "value": "Botas y botines hombre"
+        },
+        {
+          "count": 24,
+          "highlighted": "Ventiladores de aire",
+          "value": "Ventiladores de aire"
+        },
+        {
+          "count": 23,
+          "highlighted": "Secadoras de cabello",
+          "value": "Secadoras de cabello"
+        },
+        {
+          "count": 21,
+          "highlighted": "Sierras de Banco",
+          "value": "Sierras de Banco"
+        },
+        {
+          "count": 21,
+          "highlighted": "bicicletas electricas",
+          "value": "bicicletas electricas"
+        },
+        {
+          "count": 20,
+          "highlighted": "Sandalias niñas",
+          "value": "Sandalias niñas"
+        },
+        {
+          "count": 20,
+          "highlighted": "Accesorios para gatos",
+          "value": "Accesorios para gatos"
+        },
+        {
+          "count": 20,
+          "highlighted": "Botas y botines niños",
+          "value": "Botas y botines niños"
+        },
+        {
+          "count": 18,
+          "highlighted": "Cepilladoras de Madera",
+          "value": "Cepilladoras de Madera"
+        },
+        {
+          "count": 17,
+          "highlighted": "Deshumedecedor",
+          "value": "Deshumedecedor"
+        },
+        {
+          "count": 15,
+          "highlighted": "OLED",
+          "value": "OLED"
+        },
+        {
+          "count": 14,
+          "highlighted": "Audifonos gamer",
+          "value": "Audifonos gamer"
+        },
+        {
+          "count": 14,
+          "highlighted": "Sandalias niños",
+          "value": "Sandalias niños"
+        },
+        {
+          "count": 14,
+          "highlighted": "Taladros de Banco",
+          "value": "Taladros de Banco"
+        },
+        {
+          "count": 14,
+          "highlighted": "Camaras Instantaneas",
+          "value": "Camaras Instantaneas"
+        },
+        {
+          "count": 13,
+          "highlighted": "Cocinas electricas",
+          "value": "Cocinas electricas"
+        },
+        {
+          "count": 13,
+          "highlighted": "Cooler refrigeracion",
+          "value": "Cooler refrigeracion"
+        },
+        {
+          "count": 11,
+          "highlighted": "Termas",
+          "value": "Termas"
+        },
+        {
+          "count": 11,
+          "highlighted": "Calefactor",
+          "value": "Calefactor"
+        },
+        {
+          "count": 9,
+          "highlighted": "Pistolas de Clavos",
+          "value": "Pistolas de Clavos"
+        },
+        {
+          "count": 7,
+          "highlighted": "bicicletas de ruta o pista",
+          "value": "bicicletas de ruta o pista"
+        },
+        {
+          "count": 4,
+          "highlighted": "Otras consolas",
+          "value": "Otras consolas"
+        },
+        {
+          "count": 3,
+          "highlighted": "NanoCell",
+          "value": "NanoCell"
+        },
+        {
+          "count": 3,
+          "highlighted": "Smartbands",
+          "value": "Smartbands"
+        },
+        {
+          "count": 3,
+          "highlighted": "Centros de lavado",
+          "value": "Centros de lavado"
+        },
+        {
+          "count": 3,
+          "highlighted": "monociclos electricos",
+          "value": "monociclos electricos"
+        },
+        {
+          "count": 2,
+          "highlighted": "QNED",
+          "value": "QNED"
+        }
+      ],
+      "field_name": "categories.level3",
+      "stats": {
+        "total_values": 162
+      }
+    }
+  ],
+  "found": 94031,
+  "hits": [],
+  "out_of": 94031,
+  "page": 1,
+  "request_params": {
+    "collection_name": "products2",
+    "per_page": 0,
+    "q": "*"
+  },
+  "search_cutoff": false,
+  "search_time_ms": 29
+}

@@ -1,0 +1,351 @@
+{
+  "created_at": 1732143586,
+  "default_sorting_field": "percent_offer",
+  "enable_nested_fields": true,
+  "fields": [
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "spider",
+      "optional": false,
+      "sort": false,
+      "type": "string"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "updated",
+      "optional": false,
+      "sort": true,
+      "type": "int64"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "toptitle",
+      "optional": false,
+      "sort": false,
+      "type": "string"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "topstore",
+      "optional": false,
+      "sort": false,
+      "type": "string"
+    },
+    {
+      "facet": true,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "bestprice",
+      "optional": false,
+      "sort": true,
+      "type": "float"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "metrics.percent_offer",
+      "optional": false,
+      "sort": true,
+      "type": "float"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "metrics.median_hist",
+      "optional": false,
+      "sort": true,
+      "type": "float"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "metrics.prev_price",
+      "optional": false,
+      "sort": true,
+      "type": "float"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "metrics.amt_change",
+      "optional": false,
+      "sort": true,
+      "type": "float"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "metrics.amt_change_text",
+      "optional": false,
+      "sort": false,
+      "type": "string"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "metrics.percent_change",
+      "optional": false,
+      "sort": true,
+      "type": "float"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "metrics.price_minimum",
+      "optional": false,
+      "sort": true,
+      "type": "float"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "metrics.isminimum",
+      "optional": false,
+      "sort": true,
+      "type": "bool"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "metrics.percent_save",
+      "optional": false,
+      "sort": true,
+      "type": "float"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "repmodel",
+      "optional": false,
+      "sort": false,
+      "type": "string"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "urls",
+      "optional": false,
+      "sort": false,
+      "type": "string[]"
+    },
+    {
+      "facet": true,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "brand",
+      "optional": false,
+      "sort": false,
+      "type": "string"
+    },
+    {
+      "facet": true,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "categories.level1",
+      "optional": false,
+      "sort": false,
+      "type": "string"
+    },
+    {
+      "facet": true,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "categories.level2",
+      "optional": false,
+      "sort": false,
+      "type": "string"
+    },
+    {
+      "facet": true,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "categories.level3",
+      "optional": false,
+      "sort": false,
+      "type": "string"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "entrepreneur",
+      "optional": false,
+      "sort": true,
+      "type": "int32"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "last_update_date",
+      "optional": false,
+      "sort": false,
+      "type": "string"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "stores",
+      "optional": false,
+      "sort": false,
+      "type": "string[]"
+    },
+    {
+      "facet": true,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "tags",
+      "optional": false,
+      "sort": false,
+      "type": "string[]"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "top",
+      "optional": true,
+      "sort": true,
+      "type": "int32"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "numtiendas",
+      "optional": false,
+      "sort": true,
+      "type": "int32"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "images",
+      "optional": false,
+      "sort": false,
+      "type": "string[]"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "urlaff",
+      "optional": true,
+      "sort": false,
+      "type": "string"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "title",
+      "optional": false,
+      "sort": false,
+      "type": "string"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "active",
+      "optional": false,
+      "sort": true,
+      "type": "bool"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "percent_offer",
+      "optional": false,
+      "sort": true,
+      "type": "float"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "percent_change",
+      "optional": false,
+      "sort": true,
+      "type": "float"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "url",
+      "optional": false,
+      "sort": false,
+      "type": "string"
+    },
+    {
+      "facet": false,
+      "index": true,
+      "infix": false,
+      "locale": "",
+      "name": "competitors",
+      "optional": false,
+      "sort": false,
+      "type": "string"
+    }
+  ],
+  "name": "products2",
+  "num_documents": 94031,
+  "symbols_to_index": [],
+  "token_separators": []
+}
