@@ -127,7 +127,9 @@ export async function POST(req: Request) {
     - Include key differentiating features, specifications, and prices in the comparison table
     - Highlight the best value options based on price-to-performance ratio
     - Always include historical price trends in comparison tables when available
-    - Add a "Price Recommendation" column showing buy/wait recommendation based on historical data`,
+    - Add a "Price Recommendation" column showing buy/wait recommendation based on historicral data
+		
+		ALWAYS RESPOND IN THE SAME LANGUAGE AS THE USER'S QUERY. AS MOST USERS ARE FROM PERU, RESPOND IN SPANISH.`,
 		tools: {
 			searchProducts: tool({
 				description: "Search for products in the Compy catalog",
