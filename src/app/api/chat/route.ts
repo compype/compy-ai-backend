@@ -137,13 +137,10 @@ export async function POST(req: Request) {
 				parameters: z.object({
 					query: z
 						.string()
-						.describe("The search query to find relevant products. Must be in Spanish and singular. A product like 'celular', 'laptop'"),
-					brand: z
-						.string()
-						.optional()
-						.describe(
-							"Optional brand to filter by (e.g., SAMSUNG, LG, INDURAMA)",
-						),
+						.describe(`The search query to find relevant products. Must be in Spanish and singular. A product like 'celular', 'laptop rtx 4060', 'televisor led 55'.
+							If the user asks something with units like inches just add the number to the query, not the unit.
+							For example: 'televisor led 55 pulgadas' should be 'televisor led 55'.
+							`),
 					priceMax: z
 						.number()
 						.optional()
@@ -153,8 +150,7 @@ export async function POST(req: Request) {
 						.optional()
 						.describe("Minimum price to filter by"),
 				}),
-				execute: async ({ query, brand, priceMax, priceMin }) => {
-
+				execute: async ({ query, priceMax, priceMin }) => {
 					const myHeaders = new Headers();
 					myHeaders.append("X-TYPESENSE-API-KEY", process.env.TYPESENSE_API_KEY || "");
 
@@ -165,9 +161,6 @@ export async function POST(req: Request) {
 					};
 
 					const queryByItems = []
-					if (brand) {
-						queryByItems.push(`brand:${brand}`);
-					}
 
 					if (priceMax) {
 						queryByItems.push(`bestprice:<${priceMax}`);
