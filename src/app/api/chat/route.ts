@@ -189,6 +189,10 @@ export async function POST(req: Request) {
 				},
 			}),
 		},
+		experimental_telemetry: {
+			isEnabled: true,
+			functionId: "compy-ai",
+		},
 		onError: (error) => {
 			console.error(error);
 		},
