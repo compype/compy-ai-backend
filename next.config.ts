@@ -8,13 +8,6 @@ const nextConfig: NextConfig = {
 				source: "/api/:path*",
 				headers: [
 					{
-						key: "Access-Control-Allow-Origin",
-						value:
-							process.env.NODE_ENV === "development"
-								? "http://localhost:5173"
-								: "https://compy.cueva.io, https://dev.compy.pe, https://compy.pe",
-					},
-					{
 						key: "Access-Control-Allow-Methods",
 						value: "GET, POST, PUT, DELETE, OPTIONS",
 					},
@@ -25,6 +18,22 @@ const nextConfig: NextConfig = {
 				],
 			},
 		];
+	},
+	async rewrites() {
+		return {
+			beforeFiles: [
+				{
+					source: "/api/:path*",
+					has: [
+						{
+							type: "header",
+							key: "origin",
+						},
+					],
+					destination: "/api/:path*",
+				},
+			],
+		};
 	},
 };
 
