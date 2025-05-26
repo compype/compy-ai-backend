@@ -20,12 +20,11 @@ export function middleware(request: NextRequest) {
 		return new NextResponse(null, {
 			status: 204,
 			headers: {
-				"Access-Control-Allow-Origin": isAllowedOrigin
-					? origin
-					: allowedOrigins[0],
+				"Access-Control-Allow-Origin": isAllowedOrigin ? origin : allowedOrigins[0],
 				"Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-				"Access-Control-Allow-Headers": "Content-Type, Authorization",
+				"Access-Control-Allow-Headers": "Content-Type, Authorization, X-Requested-With",
 				"Access-Control-Max-Age": "86400",
+				"Access-Control-Allow-Credentials": "true",
 			},
 		});
 	}
@@ -35,11 +34,16 @@ export function middleware(request: NextRequest) {
 
 	if (isAllowedOrigin) {
 		response.headers.set("Access-Control-Allow-Origin", origin);
+		response.headers.set("Access-Control-Allow-Credentials", "true");
 	}
 
 	return response;
 }
 
+// Configure the middleware to run only on API routes
 export const config = {
-	matcher: "/api/:path*",
+	matcher: [
+		"/api/:path*",
+		"/((?!_next/static|_next/image|favicon.ico).*)",
+	],
 };
