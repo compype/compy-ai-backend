@@ -15,7 +15,7 @@ const ratelimit = new Ratelimit({
 });
 
 // Allow streaming responses up to 30 seconds
-export const maxDuration = 300;
+export const maxDuration = 60;
 
 export async function POST(req: Request) {
 	// Get user information for rate limiting
