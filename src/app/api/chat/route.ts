@@ -152,6 +152,11 @@ export async function POST(req: Request) {
 				}),
 				execute: async ({ query, priceMax, priceMin }) => {
 					const myHeaders = new Headers();
+					
+					// DEBUG: Ver qué valor tiene la API key
+					console.log("TYPESENSE_API_KEY:", process.env.TYPESENSE_API_KEY);
+					console.log("TYPESENSE_API_KEY length:", process.env.TYPESENSE_API_KEY?.length);
+					
 					myHeaders.append("X-TYPESENSE-API-KEY", process.env.TYPESENSE_API_KEY || "");
 
 					const requestOptions: RequestInit = {
@@ -181,7 +186,7 @@ export async function POST(req: Request) {
 						searchParams.set("filter_by", queryByItems.join("&&"));
 					}
 
-					const response = await fetch(`http://typesense-app-autoscaling-lb-290518720.us-west-2.elb.amazonaws.com/collections/products2/documents/search?${searchParams.toString()}`, requestOptions)
+					const response = await fetch(`https://typesense2.compy.pe/collections/products/documents/search?${searchParams.toString()}`, requestOptions)
 
 					const data = await response.json();
 
